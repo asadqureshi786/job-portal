@@ -17,6 +17,9 @@
 /* Anton */
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
+/* Rubik */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 
 :root{
    --primary: #A053ED;
@@ -34,6 +37,7 @@
     --font-Sans: "Open Sans", sans-serif;
     --font-Nunito: "Nunito", sans-serif;
     --font-Anton: "Anton", sans-serif;
+    --font-Rubik: "Rubik", sans-serif;
 
 
     /* colors */
@@ -47,6 +51,23 @@
     --breakpoint-xl: 1200px;
     --breakpoint-2xl: 1536px;
     --breakpoint-4xl: 1920px;
+}
+
+h1,h2,h3,h4,h5,h6,p,span,a,li,div{
+  font-family: var(--font-Rubik);
+}
+
+.g-text {
+  /* 1. Define the gradient */
+  background: #A053ED;
+background: linear-gradient(90deg,rgba(160, 83, 237, 0.61) 0%, rgba(160, 83, 237, 1) 50%);
+  /* 2. Clip the background to the text (WebKit prefix for compatibility) */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* 3. Make the text transparent to show the background */
+  -webkit-text-fill-color: transparent; /* Higher specificity for WebKit */
+  color: transparent; 
 }
 
 .tw-container{
