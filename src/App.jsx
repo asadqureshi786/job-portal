@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Header/>
-      <div className="main_wrapper mt-21.5">
+      <div className="main_wrapper mt-21.5 [&_p]:text-gray-600">
         <Banner/>
       </div>
       <Footer/>
