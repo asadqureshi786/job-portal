@@ -74,5 +74,5 @@ background: linear-gradient(90deg,rgba(160, 83, 237, 0.61) 0%, rgba(160, 83, 237
   @apply mx-auto xl:px-3 px-7 max-w-full xl:max-w-[95%]     
 } 
 .container{
-  @apply mx-auto xl:px-3 px-7 max-w-full xl:max-w-[85%]  2xl:max-w-[1450px]  
+  @apply mx-auto xl:px-3 px-7 max-w-full xl:max-w-[93%]  2xl:max-w-[1450px]  
 }

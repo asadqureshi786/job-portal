@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Header() {
   return (
-   <header className="py-5 absolute mx-auto w-full top-0" >
+   <header className="py-10 absolute mx-auto w-full top-0" >
      <div className='container'>
         <div className="flex items-center justify-between">
             <div className="flex items-center gap-30">
@@ -28,12 +28,28 @@ export default function Header() {
                     </li>
                 </ul>
             </div>
-            <div className="flex gap-5">
-                <button className="text-base hover:text-primary font-normal text-slate-800 transition-all cursor-pointer">Join Now</button>
-                <button className="btn btn-primary">Hire Now</button>
+            <div className="flex gap-5 relative z-1">
+                <button className="text-base hover:text-primary font-normal text-white! transition-all cursor-pointer">Join Now</button>
+              <div className='bg-white/50 p-1 rounded-full' >
+                  <button className="btn btn-primary font-medium cursor-pointer text-primary bg-white px-6 py-1.5 rounded-full">Hire Now</button>
+              </div>
             </div>
         </div>
     </div>
+
+      <div className='bg-[linear-gradient(164deg,rgba(160,83,237,1)_0%,rgba(160,83,237,0.49)_28%,rgba(160,83,237,1)_54%,rgba(160,83,237,0.5)_100%)] absolute top-7 h-[calc(100dvh-28px)]  right-6 w-lg  rounded-t-4xl'>
+        <div className='absolute bottom-0 -left-25' >
+                 <img src='/img/banner-man-glow-update.png' className='w-[70%]' />
+           <div className='w-fit border-2 bg-white/60 border-white text-center absolute top-1/2 -translate-y-1/2 rounded-[20px] left-70 p-4 pb-3.5'>
+            <p className='font-medium leading-[18px]' >Create <span className='text-blue-700' >Free</span>
+            <br className='lg:block hidden' />
+            Resume
+            </p>
+            <button className='text-xs bg-white rounded-full px-4 py-1 mt-2' >Create</button>
+        </div>
+        </div>
+      </div>
+
    </header>
   )
 }
