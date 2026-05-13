@@ -5,7 +5,7 @@ import { FaCircleArrowRight } from "react-icons/fa6";
 
 export default function Banner() {
     return (
-        <div className="min-h-[calc(100dvh-86px)] relative flex items-center">
+        <div className="4xl:min-h-[80vh] min-h-[calc(100dvh-86px)] relative flex items-center">
             <div className="container ">
             <div className="flex items-center justify-between">
                 <div className="lg:w-6/12">
