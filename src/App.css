@@ -58,14 +58,10 @@ h1,h2,h3,h4,h5,h6,p,span,a,li,div{
 }
 
 .g-text {
-  /* 1. Define the gradient */
   background: #A053ED;
-background: linear-gradient(90deg,rgba(160, 83, 237, 0.61) 0%, rgba(160, 83, 237, 1) 50%);
-  /* 2. Clip the background to the text (WebKit prefix for compatibility) */
+  background: linear-gradient(90deg,rgba(160, 83, 237, 0.61) 0%, rgba(160, 83, 237, 1) 50%);
   -webkit-background-clip: text;
   background-clip: text;
-
-  /* 3. Make the text transparent to show the background */
   -webkit-text-fill-color: transparent; /* Higher specificity for WebKit */
   color: transparent; 
 }

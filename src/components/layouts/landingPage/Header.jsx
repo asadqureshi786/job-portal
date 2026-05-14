@@ -1,4 +1,6 @@
 import React from "react";
+import { HiOutlineBellAlert } from "react-icons/hi2";
+
 
 export default function Header() {
   return (
@@ -28,12 +30,12 @@ export default function Header() {
               </li>
             </ul>
           </div>
-          <div className="flex gap-5 relative z-1">
-            <button className="text-base hover:text-primary font-normal text-white! transition-all cursor-pointer">
+          <div className="flex gap-5 relative z-99">
+            <button className="text-base hover:text-primary font-normal text-white transition-all cursor-pointer">
               Join Now
             </button>
             <div className="bg-white/50 p-1 rounded-full">
-              <button className="btn btn-primary font-medium cursor-pointer text-primary bg-white px-6 py-1.5 rounded-full">
+              <button className="btn btn-primary font-medium cursor-pointer text-primary bg-white hover:bg-primary hover:text-white transition-all px-6 py-1.5 rounded-full">
                 Hire Now
               </button>
             </div>
@@ -41,13 +43,13 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="z-1  bg-[linear-gradient(164deg,rgba(160,83,237,1)_0%,rgba(160,83,237,0.49)_28%,rgba(160,83,237,1)_54%,rgba(160,83,237,0.5)_100%)] absolute top-4 4xl:min-h-[70vh] min-h-[calc(100dvh-16px)] right-6 w-lg  rounded-t-4xl">
-        {/* h-[calc(100dvh-28px)] */}
+      <div className="z-1 bg-[linear-gradient(164deg,rgba(160,83,237,1)_0%,rgba(160,83,237,0.49)_28%,rgba(160,83,237,1)_54%,rgba(160,83,237,0.5)_100%)] absolute top-4 4xl:min-h-[87.5vh] min-h-[calc(100dvh-16px)] right-6 w-lg  rounded-t-4xl">
         <div className="absolute bottom-0  -left-25">
           <img
             src="/img/banner-man-glow-update.png"
             className="w-[70%] h-[90%] 4xl:w-[72%] object-cover"
           />
+           <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-b from-transparent to-white/100"></div>
           <div className="w-fit border-2 bg-white/60 border-white text-center absolute top-1/2 -translate-y-1/2 rounded-[20px] left-70 p-4 pb-3.5">
             <p className="font-medium leading-4.5">
               Create <span className="text-blue-700">Free</span>
@@ -57,6 +59,14 @@ export default function Header() {
             <button className="text-xs bg-white hover:bg-primary hover:text-white rounded-full px-4 py-1 mt-2 cursor-pointer">
               Create
             </button>
+          </div>
+          <div className="w-fit border-2 bg-white/60 border-white text-center absolute bottom-0 -translate-y-1/2 rounded-[20px] left-70 px-4 p-2 pb-2">
+            <p className="font-medium leading-4.5 flex items-center gap-2">
+              <span className="flex justify-center items-center bg-orange-400 rounded-full text-white w-fit p-1.5 text-lg">
+                <HiOutlineBellAlert/>
+              </span>
+              <span className="">Job available</span>
+            </p>
           </div>
         </div>
       </div>
