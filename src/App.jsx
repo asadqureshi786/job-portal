@@ -59,10 +59,24 @@ function App() {
                 <h2 className="text-gray-780 text-xl font-medium">Where Diversity Aligns <br className="lg:block hidden" /> with Possibilites</h2>
                 <a className="text-primary font-medium mt-1.5 inline-block" >&gt;Browse your experties</a>
               </div>
-              <img src='/img/users/user1.jpg' className="rounded-md" />
+              <img src='/img/users/user1.jpg' className="rounded-[30px]" />
             </div>
           </div>
         </div>
+
+        {/* Trusted Section Start */}
+        <div className="container">
+          <h2 className="text-xl font-medium text-center">Trusted <span className="text-primary" >1000+</span> company find best jobseeker</h2>
+          <div className="flex items-center justify-between gap-5">
+            <img src="/img/logos/1.svg" className="w-25 filter grayscale" />
+            <img src="/img/logos/8.svg" className="w-25 filter grayscale" />
+            <img src="/img/logos/3.svg" className="w-25 filter grayscale" />
+            <img src="/img/logos/4.svg" className="w-25 filter grayscale" />
+            <img src="/img/logos/5.svg" className="w-25 filter grayscale" />
+            <img src="/img/logos/9.svg" className="w-25 filter grayscale" />
+          </div>
+        </div>
+        {/* Trusted Section End */}
       </div>
       <Footer />
     </>

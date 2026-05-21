@@ -42,7 +42,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-
       <div className="z-1 bg-[linear-gradient(164deg,rgba(160,83,237,1)_0%,rgba(160,83,237,0.49)_28%,rgba(160,83,237,1)_54%,rgba(160,83,237,0.5)_100%)] absolute top-4 4xl:min-h-[87.5vh] min-h-[calc(100dvh-16px)] right-6 w-lg  rounded-t-4xl">
         <div className="absolute bottom-0  -left-25">
           <img
