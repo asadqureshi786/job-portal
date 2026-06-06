@@ -5,6 +5,8 @@ import "./assets/css/style.scss";
 import Header from "./components/layouts/landingPage/Header";
 import Footer from "./components/layouts/landingPage/Footer";
 import Banner from "./components/web/Banner";
+import Trusted from "./components/layouts/landingPage/Trusted";
+import TrendingJobs from "./components/layouts/landingPage/TrendingJobs";
 
 import { MdStar } from "react-icons/md";
 
@@ -63,20 +65,8 @@ function App() {
             </div>
           </div>
         </div>
-
-        {/* Trusted Section Start */}
-        <div className="container">
-          <h2 className="text-xl font-medium text-center">Trusted <span className="text-primary" >1000+</span> company find best jobseeker</h2>
-          <div className="flex items-center justify-between gap-5">
-            <img src="/img/logos/1.svg" className="w-25 filter grayscale" />
-            <img src="/img/logos/8.svg" className="w-25 filter grayscale" />
-            <img src="/img/logos/3.svg" className="w-25 filter grayscale" />
-            <img src="/img/logos/4.svg" className="w-25 filter grayscale" />
-            <img src="/img/logos/5.svg" className="w-25 filter grayscale" />
-            <img src="/img/logos/9.svg" className="w-25 filter grayscale" />
-          </div>
-        </div>
-        {/* Trusted Section End */}
+        <Trusted />
+        <TrendingJobs />
       </div>
       <Footer />
     </>

@@ -72,3 +72,10 @@ h1,h2,h3,h4,h5,h6,p,span,a,li,div{
 .container{
   @apply mx-auto xl:px-3 px-7 max-w-full xl:max-w-[93%]  2xl:max-w-[1450px]  
 }
+
+
+/* Landing Page CSS Start */
+.section-heading{
+  @apply text-[clamp(24px,2vw,30px)]  font-semibold
+}
+/* Landing Page CSS End */

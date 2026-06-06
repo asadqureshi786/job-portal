@@ -8,9 +8,9 @@ export default function Header() {
       <div className="container">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-30">
-            <a href="" className="logo text-[30px]">
-              <span className="font-bold">Hire</span>
-              <span className="text-primary">Akho.</span>
+            <a href="" className="logo text-[30px] ">
+              <span className="font-bold ">Hire</span>
+              <span className="text-primary ">Akho.</span>
             </a>
             <ul className="flex items-center gap-8 [&_a]:text-base [&_a]:hover:text-primary font-normal text-slate-800 [&_a]:transition-all ">
               <li>

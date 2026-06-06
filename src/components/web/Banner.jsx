@@ -24,7 +24,7 @@ export default function Banner() {
 
                     <div className="flex items-center mt-5 gap-2">
                         <div className="bg-slate-100 rounded-full px-5 pt-2.5 pb-3 w-[50%]">
-                            <input type="text" placeholder='Enter Your Email' className='text-slate-800 border-0 focus:border-0 focus:outline-none focus:shadow-none'  />
+                            <input type="text" placeholder='Job title or keyword' className='text-slate-800 border-0 focus:border-0 focus:outline-none focus:shadow-none'  />
                         </div>
                         <button className='bg-primary  hover:bg-secondary w-max whitespace-pre cursor-pointer text-white px-6 py-3 rounded-full transition-all flex items-center gap-1' >Get Started <span><FaCircleArrowRight /></span> </button>
                     </div>
