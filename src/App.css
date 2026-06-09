@@ -20,6 +20,9 @@
 /* Rubik */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+/* Playfair */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 
 :root{
    --primary: #A053ED;
@@ -38,6 +41,7 @@
     --font-Nunito: "Nunito", sans-serif;
     --font-Anton: "Anton", sans-serif;
     --font-Rubik: "Rubik", sans-serif;
+    --font-PlayFair: "Playfair Display", serif;
 
 
     /* colors */
@@ -53,8 +57,12 @@
     --breakpoint-4xl: 1920px;
 }
 
-h1,h2,h3,h4,h5,h6,p,span,a,li,div{
+p,span,a,li,div{
   font-family: var(--font-Rubik);
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: var(--font-PlayFair);
 }
 
 .g-text {
@@ -64,6 +72,8 @@ h1,h2,h3,h4,h5,h6,p,span,a,li,div{
   background-clip: text;
   -webkit-text-fill-color: transparent; /* Higher specificity for WebKit */
   color: transparent; 
+  font-weight: 900;
+  @apply font-PlayFair;
 }
 
 .tw-container{
@@ -75,7 +85,20 @@ h1,h2,h3,h4,h5,h6,p,span,a,li,div{
 
 
 /* Landing Page CSS Start */
+.section-heading-sm{
+  @apply text-[clamp(24px,2vw,30px)]  font-semibold;
+}
 .section-heading{
-  @apply text-[clamp(24px,2vw,30px)]  font-semibold
+  @apply text-[clamp(42px,2.6vw,60px)] font-semibold text-black mb-1 ;
+}
+.section-desc{
+  @apply lg:text-base text-sm text-black
+}
+
+section.web{
+  @apply py-10 mt-15;
+}
+.see-all{
+  @apply text-primary font-normal underline
 }
 /* Landing Page CSS End */

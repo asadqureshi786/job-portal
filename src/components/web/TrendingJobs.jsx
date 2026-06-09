@@ -15,8 +15,8 @@ export default function TrendingJobs() {
   return (
     <div class="container mt-20">
         <div class="flex justify-between items-center">
-            <h2 class="section-heading">Trending Jobs</h2>
-            <a class="text-primary font-normal underline" >See All Jobs</a>
+            <h2 class="section-heading-sm">Trending Jobs</h2>
+            <a href="#" class="see-all" >See All Jobs</a>
         </div>
         <div class="grid grid-cols-3 gap-6 mt-10">
 

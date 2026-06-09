@@ -1,19 +1,21 @@
 import { useState } from "react";
 import "./App.css";
 import "./assets/css/style.scss";
+import Router from "./routes/router";
 
-import Header from "./components/layouts/landingPage/Header";
-import Footer from "./components/layouts/landingPage/Footer";
+import Header from "./components/web/Header";
+import Footer from "./components/web/Footer";
 import Banner from "./components/web/Banner";
-import Trusted from "./components/layouts/landingPage/Trusted";
-import TrendingJobs from "./components/layouts/landingPage/TrendingJobs";
+import Trusted from "./components/web/Trusted";
+import OnePlatform from "./components/web/OnePlatform";
+import TrendingJobs from "./components/web/TrendingJobs";
 
 import { MdStar } from "react-icons/md";
 
 function App() {
   return (
     <>
-      <Header />
+      {/* <Header />
       <div className="main_wrapper mt-21.5 [&_p]:text-gray-600">
         <Banner />
         <div className="container my-15">
@@ -66,9 +68,11 @@ function App() {
           </div>
         </div>
         <Trusted />
+        <OnePlatform/>
         <TrendingJobs />
       </div>
-      <Footer />
+      <Footer /> */}
+      <Router/>
     </>
   );
 }

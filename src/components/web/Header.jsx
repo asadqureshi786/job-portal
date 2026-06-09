@@ -49,7 +49,7 @@ export default function Header() {
             className="w-[70%] h-[90%] 4xl:w-[72%] object-cover"
           />
            <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-b from-transparent to-white/100"></div>
-          <div className="w-fit border-2 bg-white/60 border-white text-center absolute top-1/2 -translate-y-1/2 rounded-[20px] left-70 p-4 pb-3.5">
+          <div className="w-fit border-2  bg-white/60 border-white text-center absolute top-1/2 -translate-y-1/2 rounded-[20px] left-70 p-4 pb-3.5">
             <p className="font-medium leading-4.5">
               Create <span className="text-blue-700">Free</span>
               <br className="lg:block hidden" />
@@ -59,7 +59,7 @@ export default function Header() {
               Create
             </button>
           </div>
-          <div className="w-fit border-2 bg-white/60 border-white text-center absolute bottom-0 -translate-y-1/2 rounded-[20px] left-70 px-4 p-2 pb-2">
+          <div className="w-fit border-2 animate-bounce bg-white/60 border-white text-center absolute bottom-0 -translate-y-1/2 rounded-[20px] left-70 px-4 p-2 pb-2">
             <p className="font-medium leading-4.5 flex items-center gap-2">
               <span className="flex justify-center items-center bg-orange-400 rounded-full text-white w-fit p-1.5 text-lg">
                 <HiOutlineBellAlert/>
