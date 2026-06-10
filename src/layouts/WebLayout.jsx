@@ -7,7 +7,9 @@ import Footer from "../components/web/Footer"
 export default function WebLayout() {
   return (
    <>
-    sadasdasd
+    <Header/>
+    <Outlet/>
+    <Footer/>
    </>    
   )
 }

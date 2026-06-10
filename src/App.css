@@ -26,7 +26,7 @@
 
 :root{
    --primary: #A053ED;
-   --secondary: #2d6a4f;
+   --secondary: #f15bb5;
 }
 
 
@@ -101,4 +101,9 @@ section.web{
 .see-all{
   @apply text-primary font-normal underline
 }
+
+.website .btn-border{
+  @apply border border-primary text-primary font-medium px-6 py-2.5 rounded-md text-base transition-all hover:bg-primary hover:text-white cursor-pointer 
+}
+
 /* Landing Page CSS End */
