@@ -7,6 +7,7 @@ import Trusted from "../components/web/Trusted";
 import OnePlatform from "../components/web/OnePlatform";
 import TrendingJobs from "../components/web/TrendingJobs";
 import Counter from "../components/web/Counter";
+import JobByLoction from "../components/web/JobByLoction";
 
 // icons
 import { MdStar } from "react-icons/md";
@@ -76,6 +77,7 @@ export default function Landing() {
         <OnePlatform />
         <TrendingJobs />
         <Counter />
+        <JobByLoction/>
       </div>
       <Footer />
     </div>
