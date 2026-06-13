@@ -15,7 +15,7 @@ import { MdStar } from "react-icons/md";
 export default function Landing() {
   return (
     <div>
-      <div className="main_wrapper website mt-21.5 [&_p]:text-gray-600">
+      <div className="main_wrapper website lg:mt-21.5 mt-19.5 [&_p]:text-gray-600">
         <Banner />
         <div className="container my-15">
           <div className="flex justify-between items-center flex-wrap">

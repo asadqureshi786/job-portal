@@ -1,8 +1,8 @@
-import React from "react";
+import { useState } from "react";
 
 // Icons
 import { HiOutlineBellAlert } from "react-icons/hi2";
-import { RxHamburgerMenu } from "react-icons/rx";
+import { RxHamburgerMenu, RxCross2  } from "react-icons/rx";
 
 
 export default function Header() {
@@ -28,6 +28,8 @@ export default function Header() {
       utl: "#",
     },
   ];
+
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <>
@@ -91,20 +93,40 @@ export default function Header() {
       {/* Mobile Header */}
 
       <div className="lg:hidden block">
-        <header className="py-6 absolute mx-auto w-full top-0 right-0" >
+        <header className="py-4 absolute mx-auto w-full top-0 right-0">
           <div className="container">
-            <div className="flex items-center justify-between">
-               <a href="" className="logo text-[30px] ">
+            <div className="flex items-center justify-between relative">
+              <a href="" className="logo text-[30px] ">
                 <span className="font-bold ">Hire</span>
                 <span className="text-primary ">Akho.</span>
               </a>
-              <button type="button" className="text-3xl" >
-                <RxHamburgerMenu/>
+              <button
+                type="button"
+                onClick={() => setOpenMenu(!openMenu)}
+                className="text-2xl cursor-pointer transition-all hover:text-primary"
+              >
+                { !openMenu ? <RxHamburgerMenu /> : <RxCross2 /> }
+
               </button>
+
+              <div
+                className={` ${openMenu ? "max-h-100 overflow-auto" : "max-h-0 overflow-hidden"} transition-all duration-500 absolute shadow-[0px_50px_500px_gray] top-14 bg-primary  rounded-lg left-0 w-full  z-99`}
+              >
+                <ul className="flex items-start flex-col gap-4 py-6 px-5 [&_a]:text-base [&_a]:hover:text-slate-300 font-normal text-white [&_a]:transition-all ">
+                  {menuItems.map((item, index) => (
+                    <li>
+                      <a href="">{item.title}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </header>
       </div>
+
+
+      
     </>
   );
 }
