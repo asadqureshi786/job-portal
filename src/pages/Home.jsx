@@ -8,7 +8,7 @@ import OnePlatform from "../components/web/OnePlatform";
 import TrendingJobs from "../components/web/TrendingJobs";
 import Counter from "../components/web/Counter";
 import JobByLoction from "../components/web/JobByLoction";
-
+import Faqs from "../components/web/Faqs";
 // icons
 import { MdStar } from "react-icons/md";
 
@@ -18,7 +18,7 @@ export default function Landing() {
       <div className="main_wrapper website mt-21.5 [&_p]:text-gray-600">
         <Banner />
         <div className="container my-15">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center flex-wrap">
             <div>
               <p className="text-base">
                 <span className="font-medium text-primary!">&gt;100K+</span>{" "}
@@ -78,8 +78,8 @@ export default function Landing() {
         <TrendingJobs />
         <Counter />
         <JobByLoction/>
+        <Faqs/>
       </div>
-      <Footer />
     </div>
   );
 }

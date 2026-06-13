@@ -1,10 +1,58 @@
-import React from 'react'
+import React from "react";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import { RiTwitterXFill } from "react-icons/ri";
+import { BsInstagram } from "react-icons/bs";
 
 export default function Footer() {
   return (
-    <div className='container mt-10 hidden' >
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius accusamus sapiente odio voluptatibus distinctio veritatis debitis saepe mollitia? Nemo dolorum possimus sint aperiam accusantium, veniam unde porro soluta repudiandae odio ea perspiciatis rem odit quaerat. Minima possimus earum molestiae officiis rerum asperiores officia. Expedita quo rerum nulla architecto odit, voluptatum alias culpa laborum rem repudiandae possimus pariatur obcaecati maiores ipsum nam, quos non at veniam cumque? Culpa voluptates magnam odio natus dolore dignissimos placeat adipisci, possimus ratione aliquid? Iusto eligendi reiciendis ad dignissimos modi quam quos! Reiciendis amet corrupti iusto voluptatem nihil cupiditate dolores voluptates pariatur voluptate atque vel sed, assumenda ipsam deleniti, accusamus odio veritatis possimus cumque explicabo delectus perspiciatis fugiat. Temporibus adipisci sequi quibusdam obcaecati vel vitae aliquam dolorem ipsam veritatis vero distinctio non facilis sed odio iure, est quaerat reiciendis laudantium earum aut a expedita asperiores! Molestias eaque tenetur dicta veniam blanditiis aspernatur. Esse perferendis accusamus facere fuga culpa officia magni voluptas aliquam accusantium cupiditate quas animi aut, iure voluptatibus distinctio tempora non obcaecati recusandae, unde et atque. Distinctio provident voluptas laudantium, libero ipsa mollitia cupiditate adipisci nam suscipit minima minus aperiam? Magnam dolorum necessitatibus facilis officiis expedita voluptatum veniam laudantium odio beatae dolores maiores itaque labore, doloremque debitis? Excepturi sit delectus tenetur sapiente fuga. Magnam perspiciatis amet rerum dignissimos repudiandae soluta nam totam alias iusto, culpa quo animi vero atque a harum laboriosam. Laboriosam, vero ipsa eius consequuntur officia ipsum incidunt, harum explicabo dolor nobis quas officiis assumenda aut soluta velit, minus nihil dolorum nostrum tempora itaque hic dolores? Sapiente aspernatur porro impedit iure maxime eaque, illum totam neque culpa, obcaecati molestiae necessitatibus ea, aut cupiditate et quasi suscipit unde. Dolor quo deserunt alias placeat molestiae asperiores, unde quasi tenetur, excepturi porro amet, sit molestias nemo veritatis veniam repudiandae qui ipsa. Mollitia odit voluptatum quae magnam similique, a minus necessitatibus architecto aut voluptatem nihil, reiciendis pariatur, id omnis. Quam alias consectetur dolorem! Aperiam quidem eos quis corrupti. Porro necessitatibus ut earum iste eveniet, aspernatur tempora illum ipsum temporibus sit omnis error dolore laboriosam quisquam atque molestiae, veritatis voluptatum corrupti dolorum consequuntur sint possimus. Autem quis error non ipsum harum deleniti illum quidem corrupti mollitia laudantium? Blanditiis officia neque nihil temporibus in reiciendis nulla voluptatem expedita tempora at sint molestias perspiciatis iste alias odio libero quas laborum consectetur a necessitatibus, quod, ratione repellat. Sint officia illo distinctio in omnis eaque quidem accusantium animi corporis, quasi sapiente nostrum, ut dolorum nobis? Aspernatur nisi alias officia ad neque quam, molestias autem odio dolor fugit molestiae consequatur eligendi voluptas id praesentium harum quis sed. Illum fugit ex officiis nesciunt ipsum voluptatem ut minima sunt impedit eaque incidunt dolore maiores architecto expedita est aspernatur minus distinctio, iusto culpa error natus quisquam numquam cum! Laborum, itaque sed! Dolorem aut delectus nemo iusto doloremque, ipsa explicabo voluptas perspiciatis quo cum laboriosam deserunt accusantium vitae, veniam numquam sunt quos eaque? Aliquam amet ullam assumenda esse nostrum quasi vitae nobis est, illo autem, ratione voluptates laudantium iusto mollitia officiis distinctio quod quo ipsa rerum rem magnam quisquam repellat. Sapiente quam ea commodi facere natus sint aperiam animi deserunt, perferendis accusamus dolore quas aut officiis obcaecati fugit voluptates quis praesentium magni placeat veniam? Labore veniam sequi magni tempore! Praesentium magni distinctio explicabo enim, blanditiis harum iure sint eum aliquam ad debitis beatae soluta, earum perspiciatis commodi, et dolorem? Illum, recusandae saepe.
-    </div>
-
-  )
+    <section className="web bg-black">
+      <div className="container">
+        <div className="flex items-center flex-col gap-10">
+          <a href="" className="logo text-5xl text-white! ">
+            <span className="font-bold ">Hire</span>
+            <span className="text-primary ">Akho.</span>
+          </a>
+          <ul className="flex items-center md:gap-15 gap-5 [&_a]:text-base [&_a]:hover:text-primary font-normal text-slate-200 [&_a]:transition-all md:flex-row flex-col ">
+            <li>
+              <a href="">Home</a>
+            </li>
+            <li>
+              <a href="">Find Job</a>
+            </li>
+            <li>
+              <a href="">Resources</a>
+            </li>
+            <li>
+              <a href="">Blogs</a>
+            </li>
+            <li>
+              <a href="">Contact Us</a>
+            </li>
+          </ul>
+          <ul className="flex items-center gap-8 [&_a]:text-[20px] [&_a]:hover:text-primary font-normal text-slate-200 [&_a]:transition-all ">
+            <li>
+              <a href="">
+                <FaFacebook />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <RiTwitterXFill />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <BsInstagram />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <FaLinkedin />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
 }
