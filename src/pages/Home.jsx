@@ -11,11 +11,17 @@ import JobByLoction from "../components/web/JobByLoction";
 import Faqs from "../components/web/Faqs";
 // icons
 import { MdStar } from "react-icons/md";
+import { MdNightsStay } from "react-icons/md";
+import { IoSunny } from "react-icons/io5";
+
+import { useTheme } from "../context/ThemeContext";
 
 export default function Landing() {
+  const { theme , toggleTheme } = useTheme();
+
   return (
     <div>
-      <div className="main_wrapper website lg:mt-21.5 mt-19.5 [&_p]:text-gray-600">
+      <div className="main_wrapper website lg:mt-21.5 mt-19.5 [&_p]:text-gray-600 dark:bg-black/100 transition-all">
         <Banner />
         <div className="container my-15">
           <div className="flex justify-between items-center flex-wrap">
@@ -77,8 +83,16 @@ export default function Landing() {
         <OnePlatform />
         <TrendingJobs />
         <Counter />
-        <JobByLoction/>
-        <Faqs/>
+        <JobByLoction />
+        <Faqs />
+      </div>
+
+      <div onClick={toggleTheme} className="group fixed bottom-3 right-3 z-100 rounded-full border border-black/40 hover:border-primary cursor-pointer transition-all hover:bg-primary bg-white size-9 flex justify-center items-center text-2xl">
+        {theme !== "light" ? (
+          <MdNightsStay className="-rotate-8 text-black group-hover:text-white transition-all " />
+        ) : (
+          <IoSunny className="-rotate-8 text-black group-hover:text-white transition-all " />
+        )}
       </div>
     </div>
   );

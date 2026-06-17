@@ -5,7 +5,7 @@ import { FaCircleArrowRight } from "react-icons/fa6";
 
 export default function Banner() {
     return (
-        <div className="4xl:min-h-[80vh] min-h-[calc(100dvh-86px)] relative flex items-center bg-[url('/img/mobile-web-banner.png')]">
+        <div className="4xl:min-h-[80vh] min-h-[calc(100dvh-86px)] relative flex items-center">
             <div className="container ">
             <div className="flex items-center justify-between">
                 <div className="lg:w-6/12">
@@ -19,7 +19,7 @@ export default function Banner() {
                         <p className='text-[15px] font-semibold text-black' >Inclusive workplace for all.</p>
                     </div>
 
-                    <h1 className='4xl:text-7xl lg:text-6xl font-semibold text-black' > <span className='g-text' >Find Jobs</span> Where <br className='lg:inline-block hidden' /> Diversity Thrives</h1>
+                    <h1 className='4xl:text-7xl lg:text-6xl font-semibold text-black dark:text-white' > <span className='g-text' >Find Jobs</span> Where <br className='lg:inline-block hidden' /> Diversity Thrives</h1>
                     <p className='4xl:text-lg text-base mt-4' >Search for roles in organizations that value diversity and <br className='lg:inline-block hidden' /> inclusion that align with your values.</p>
 
                     <div className="flex items-center mt-5 gap-2">

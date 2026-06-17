@@ -56,7 +56,7 @@ export default function OnePlatform() {
   ];
 
   return (
-    <section className="web bg-slate-100">
+    <section className="web bg-slate-100 dark:bg-black/90">
       <div className="container">
         <div className="w-8/12 mx-auto text-center">
           <h2 className="section-heading">
@@ -73,23 +73,23 @@ export default function OnePlatform() {
 
         <div className="grid lg:grid-cols-4 gap-5 mt-10">
           {list.map((item, index) => (
-            <div className="flex items-center bg-white transition-all hover:bg-primary group rounded-full px-3 pe-5 py-2 justify-between w-full">
+            <div className="flex items-center bg-white dark:bg-darkbg1 transition-all hover:bg-primary group rounded-full px-3 pe-5 py-2 justify-between w-full">
               <div className="flex items-center  gap-4">
                 <div className="bg-gray-200 group-hover:bg-white transition-all rounded-full p-4 flex justify-center items-center text-2xl">
                   {item.icon}
                 </div>
                 <div>
-                  <p className="text-slate-900 font-medium group-hover:text-white transition-all">
+                  <p className="text-slate-900 font-medium group-hover:text-white dark:text-darktext1! transition-all">
                     {item.title}
                   </p>
-                  <span className="text-gray-600 group-hover:text-white transition-all">
+                  <span className="text-gray-600 group-hover:text-white dark:text-darktext2! transition-all">
                     {item.count}
                   </span>
                 </div>
               </div>
               <a
                 href=""
-                className="text-[20px] group-hover:text-white transition-all"
+                className="text-[20px] group-hover:text-white dark:text-darktext1! transition-all"
               >
                 <IoIosArrowForward />
               </a>

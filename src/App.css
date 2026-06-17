@@ -24,6 +24,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root{
    --primary: #A053ED;
    --secondary: #f15bb5;
@@ -43,10 +45,15 @@
     --font-Rubik: "Rubik", sans-serif;
     --font-PlayFair: "Playfair Display", serif;
 
-
     /* colors */
     --color-primary: var(--primary);
     --color-secondary: var(--secondary);
+    --color-darkbg1 : #1a1a1a;
+
+
+    /* Text Colors */
+    --color-darktext1 : #d9d9d9;
+    --color-darktext2 : #bcbcbc;
 
     /* Responsive */
     --breakpoint-sm: 640px;
@@ -89,10 +96,10 @@ h1,h2,h3,h4,h5,h6{
   @apply text-[clamp(24px,2vw,30px)]  font-semibold;
 }
 .section-heading{
-  @apply text-[clamp(42px,2.6vw,60px)] font-semibold text-black mb-1 ;
+  @apply text-[clamp(42px,2.6vw,60px)] font-semibold text-black dark:text-white mb-1 ;
 }
 .section-desc{
-  @apply lg:text-base text-sm text-black
+  @apply lg:text-base text-sm text-black dark:text-darktext1
 }
 
 section.web{
