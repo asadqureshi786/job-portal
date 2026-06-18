@@ -6,6 +6,7 @@ import WebLayout from '../layouts/WebLayout';
 
 // Website Imports
 import Home from "../pages/Home";
+import FindJob from '../pages/FindJob';
 
 
 
@@ -16,6 +17,7 @@ export default function router() {
             <Route path='/' element={<WebLayout/>}>
                 <Route path='' element={<Home />}/>
                 <Route path='home' element={<Home />}/>
+                <Route path='find-job' element={<FindJob />}/>
             </Route>
         </Routes>
     </BrowserRouter>

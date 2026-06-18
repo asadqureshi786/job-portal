@@ -90,6 +90,9 @@ h1,h2,h3,h4,h5,h6{
   @apply mx-auto xl:px-3 px-7 max-w-full xl:max-w-[93%]  2xl:max-w-[1450px]  
 }
 
+.dark body{
+  @apply dark:bg-black/100
+}
 
 /* Landing Page CSS Start */
 .section-heading-sm{
@@ -112,5 +115,18 @@ section.web{
 .website .btn-border{
   @apply border border-primary text-primary font-medium px-6 py-2.5 rounded-md text-base transition-all hover:bg-primary hover:text-white cursor-pointer 
 }
-
+.jar-opacity{
+  animation-name: jarOpacity;
+  animation-duration: 0.8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+@keyframes jarOpacity{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
 /* Landing Page CSS End */

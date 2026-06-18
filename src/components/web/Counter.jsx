@@ -3,7 +3,7 @@ import React from "react";
 export default function Counter() {
   return (
     <section className="mt-15 bg-[linear-gradient(90deg,rgba(59,96,138,1)_0%,rgba(242,0,255,1)_100%)] relative overflow-hidden py-10" >
-      <img src="/img/jar-bg.png" className="absolute bg-cover object-cover w-full h-full inset-0 opacity-20  invert-100 brightness-100 " />
+      <img src="/img/jar-bg.png" className="absolute bg-cover object-cover w-full h-full inset-0 opacity-20  invert-100 brightness-100 jar-opacity" />
       <div className="container relative z-1">
         <div className="grid md:grid-cols-3 grid-cols-1 py-20 md:gap-0 gap-15">
             <div className="text-center" >

@@ -56,7 +56,7 @@ export default function Faqs() {
             <div className="space-y-4 mt-10">
           {list.map((faq, index) => (
             // border border-gray-300
-            <div className={`rounded-lg overflow-hidden border border-primary/30 ${active === index ? 'bg-primary text-white' : ''}`}> 
+            <div className={`rounded-lg overflow-hidden border border-primary/30 ${active === index ? 'bg-primary text-white' : 'dark:text-primary'}`}> 
               <button onClick={()=> toggleFAQ(index)} className="4xl:text-lg w-full flex items-center justify-between p-4  font-medium text-left cursor-pointer">
                 <span>{faq.question}</span>
              <span
