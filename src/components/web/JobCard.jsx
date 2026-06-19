@@ -50,8 +50,8 @@ export default function JobCard({ list }) {
           </div>
 
           <div className="flex items-center justify-between mt-5">
-            <div className="flex items-center gap-2 dark:text-darktext1">
-              <h3 className="font-Rubik! 4xl:text-[22px] text-lg font-semibold">
+            <div className="flex items-center gap-2 ">
+              <h3 className="font-Rubik! 4xl:text-[22px] text-lg font-semibold dark:text-darktext1">
                 {item.starting_range}K
               </h3>
               <h3 className="font-Rubik! 4xl:text-[22px] text-lg font-semibold">
