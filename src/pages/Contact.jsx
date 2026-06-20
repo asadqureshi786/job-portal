@@ -1,4 +1,5 @@
 import React from "react";
+import { MdOutlineMailOutline } from "react-icons/md";
 
 export default function Contact() {
   return (
@@ -16,7 +17,7 @@ export default function Contact() {
       <div className="container">
         <div className="grid grid-cols-2 mt-5">
          <div>
-             <span className="text-sm text-black dark:text-darktext2" >Contact</span>
+             <span className="text-sm text-black dark:text-darktext2 flex items-center gap-2" > <span><MdOutlineMailOutline/></span> Contact</span>
           <h2 className="text-6xl text-black dark:text-darktext1 font-Rubik">
             How can we help you
           </h2>
