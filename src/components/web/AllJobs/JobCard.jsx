@@ -1,12 +1,16 @@
 import React from "react";
+import ApplySidebar from "./ApplySidebar";
+
 import { FaStar } from "react-icons/fa6";
 import { GoClock } from "react-icons/go";
+
+
 
 export default function JobCard({ list }) {
   return (
     <>
       {list.map((item, index) => (
-        <div className="border border-slate-200 group dark:border-slate-700 rounded-xl p-4 hover:bg-slate-100 dark:bg-darkbg1 dark:hover:bg-inherit transition-all">
+        <div key={index} className="border border-slate-200 group dark:border-slate-700 rounded-xl p-4 hover:bg-slate-100 dark:bg-darkbg1 dark:hover:bg-inherit transition-all">
           <div className="flex items-center gap-5">
             <div className="bg-gray-100 dark:bg-black dark:group-hover:bg-darkbg1 rounded-xl p-4 flex justify-center items-center">
               <img src={item.logo} className="company-logo w-10" />
@@ -30,7 +34,7 @@ export default function JobCard({ list }) {
           </div>
 
           <div className="mt-5">
-            <h3 className="font-Rubik! 4xl:text-[22px] text-lg font-semibold dark:text-darktext1">
+            <h3 className="font-Rubik! 4xl:text-[22px] text-lg font-semibold text-gray-600 dark:text-darktext1">
               {item.title}
             </h3>
             <p className="lg:text-base font-normal text-slate-600! dark:text-darktext2! leading-5.5 mt-1.5">
@@ -51,20 +55,18 @@ export default function JobCard({ list }) {
 
           <div className="flex items-center justify-between mt-5">
             <div className="flex items-center gap-2 ">
-              <h3 className="font-Rubik! 4xl:text-[22px] text-lg font-semibold dark:text-darktext1">
+              <h3 className="font-Rubik! 4xl:text-[22px] text-lg font-semibold  text-black dark:text-darktext1">
                 {item.starting_range}K
               </h3>
-              <h3 className="font-Rubik! 4xl:text-[22px] text-lg font-semibold">
+              <h3 className="font-Rubik! 4xl:text-[22px] text-lg font-semibold text-black dark:text-darktext1">
                 {" "}
                 -{" "}
               </h3>
-              <h3 className="font-Rubik! 4xl:text-[22px] text-lg font-semibold">
+              <h3 className="font-Rubik! 4xl:text-[22px] text-lg font-semibold text-black dark:text-darktext1">
                 {item.end_range}K/m
               </h3>
             </div>
-            <button className="btn bg-primary/30 dark:group-hover:bg-darkbg1 text-primary px-4 py-1.5 rounded-md hover:bg-primary transition-all hover:text-white cursor-pointer">
-              Apply Now
-            </button>
+            <ApplySidebar data={item} />
           </div>
         </div>
       ))}

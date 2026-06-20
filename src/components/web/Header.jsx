@@ -21,16 +21,12 @@ export default function Header() {
       utl: "find-job",
     },
     {
-      title: "Resources",
-      utl: "#",
-    },
-    {
       title: "Blogs",
       utl: "#",
     },
     {
       title: "Contact Us",
-      utl: "#",
+      utl: "contact",
     },
   ];
 
@@ -48,7 +44,7 @@ export default function Header() {
               </a>
               <ul className="flex items-center gap-8 [&_a]:text-base [&_a]:hover:text-primary font-normal text-slate-800 dark:text-slate-200 [&_a]:transition-all ">
                 {menuItems.map((item, index) => (
-                  <li>
+                  <li key={index}  >
                     <NavLink to={item.utl}> {item.title} </NavLink>
                   </li>
                 ))}
@@ -56,11 +52,11 @@ export default function Header() {
             </div>
             <div className="flex gap-5 relative z-99">
               <button className="text-base hover:text-primary font-normal text-white transition-all cursor-pointer">
-                Join Now
+                Register
               </button>
               <div className="bg-white/50 p-1 rounded-full">
                 <button className="btn btn-primary font-medium cursor-pointer text-primary bg-white hover:bg-primary hover:text-white transition-all px-6 py-1.5 rounded-full">
-                  Hire Now
+                  Login
                 </button>
               </div>
             </div>
@@ -119,7 +115,7 @@ export default function Header() {
               >
                 <ul className="flex items-start flex-col gap-4 py-6 px-5 [&_a]:text-base [&_a]:hover:text-slate-300 font-normal text-white [&_a]:transition-all ">
                   {menuItems.map((item, index) => (
-                    <li>
+                    <li key={index}  >
                       <a href="">{item.title}</a>
                     </li>
                   ))}

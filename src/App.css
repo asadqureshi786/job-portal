@@ -101,8 +101,14 @@ h1,h2,h3,h4,h5,h6{
 .section-heading{
   @apply text-[clamp(42px,2.6vw,60px)] font-semibold text-black dark:text-white mb-1 ;
 }
+.section-heading.o-banner-heading{
+  @apply lg:text-6xl! md:pb-3 pb-0 text-center
+}
 .section-desc{
   @apply lg:text-base text-sm text-black dark:text-darktext1
+}
+.other-web-banner{
+  @apply mt-40 mb-30
 }
 
 section.web{
@@ -114,6 +120,9 @@ section.web{
 
 .website .btn-border{
   @apply border border-primary text-primary font-medium px-6 py-2.5 rounded-md text-base transition-all hover:bg-primary hover:text-white cursor-pointer 
+}
+.apply-now-btn{
+  @apply  bg-primary/30 dark:group-hover:bg-darkbg1 text-primary px-4 py-1.5 rounded-md hover:bg-primary transition-all hover:text-white cursor-pointer
 }
 .jar-opacity{
   animation-name: jarOpacity;
@@ -150,7 +159,7 @@ section.web{
   @apply opacity-0 hidden
 }
 .side-filter .item label div{
-  @apply size-4 border border-slate-600 relative flex items-center justify-center
+  @apply size-4 border dark:border-slate-600 border-slate-400 rounded-[3px] relative flex items-center justify-center
 }
 .side-filter .item.radio-to label div{
   @apply rounded-full
@@ -169,7 +178,7 @@ section.web{
   @apply opacity-100 scale-100 
 }
 .side-filter .item label{
-  @apply flex items-center gap-2 4xl:text-base text-sm cursor-pointer;
+  @apply flex items-center gap-2 4xl:text-base text-sm cursor-pointer text-slate-700 dark:text-darktext1;
 }
 
 /* .webkit-scroll::-webkit-scrollbar-track {
@@ -180,12 +189,15 @@ section.web{
   width: 4px;
 }
 
-.webkit-scroll::-webkit-scrollbar-track {
-  @apply bg-primary;
+.dark .webkit-scroll::-webkit-scrollbar-track {
+  @apply bg-neutral-500;
 }
 
+.dark .webkit-scroll::-webkit-scrollbar-thumb {
+  @apply bg-primary  rounded-full;
+}
 .webkit-scroll::-webkit-scrollbar-thumb {
-  @apply bg-neutral-500 rounded-full;
+  @apply bg-neutral-200 rounded-full;
 }
 
 

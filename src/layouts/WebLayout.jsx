@@ -25,7 +25,7 @@ export default function WebLayout() {
         onClick={toggleTheme}
         className="group fixed bottom-3 right-3 z-100 rounded-full border border-black/40 hover:border-primary cursor-pointer transition-all hover:bg-primary bg-white size-9 flex justify-center items-center text-2xl"
       >
-        {theme !== "light" ? (
+        {theme === "light" ? (
           <MdNightsStay className="-rotate-8 text-black group-hover:text-white transition-all " />
         ) : (
           <IoSunny className="-rotate-8 text-black group-hover:text-white transition-all " />

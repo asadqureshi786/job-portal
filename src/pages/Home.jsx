@@ -5,7 +5,7 @@ import Footer from "../components/web/Footer";
 import Banner from "../components/web/Banner";
 import Trusted from "../components/web/Trusted";
 import OnePlatform from "../components/web/OnePlatform";
-import JobCard from "../components/web/JobCard";
+import JobCard from "../components/web/AllJobs/JobCard";
 import Counter from "../components/web/Counter";
 import JobByLoction from "../components/web/JobByLoction";
 import Faqs from "../components/web/Faqs";
