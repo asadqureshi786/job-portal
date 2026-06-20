@@ -8,6 +8,7 @@ import WebLayout from '../layouts/WebLayout';
 import Home from "../pages/Home";
 import FindJob from '../pages/FindJob';
 import Contact from '../pages/Contact';
+import Blogs from '../pages/Blogs';
 
 
 export default function router() {
@@ -19,6 +20,7 @@ export default function router() {
                 <Route path='home' element={<Home />}/>
                 <Route path='find-job' element={<FindJob />}/>
                 <Route path='contact' element={<Contact />}/>
+                <Route path='blogs' element={<Blogs />}/>
             </Route>
         </Routes>
     </BrowserRouter>

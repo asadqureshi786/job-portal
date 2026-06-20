@@ -22,7 +22,7 @@ export default function Header() {
     },
     {
       title: "Blogs",
-      utl: "#",
+      utl: "blogs",
     },
     {
       title: "Contact Us",

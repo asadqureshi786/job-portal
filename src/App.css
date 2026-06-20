@@ -186,7 +186,7 @@ section.web{
 } */
 
 .webkit-scroll::-webkit-scrollbar {
-  width: 4px;
+  width: 2px;
 }
 
 .dark .webkit-scroll::-webkit-scrollbar-track {
@@ -199,6 +199,37 @@ section.web{
 .webkit-scroll::-webkit-scrollbar-thumb {
   @apply bg-neutral-200 rounded-full;
 }
-
-
 /* Landing Page CSS End */
+
+/* Contact Page CSS Start */
+form .group{
+  @apply  mb-6 flex flex-col
+}
+form .group label{
+  @apply  mb-2 flex flex-col font-medium text-base text-black dark:text-darktext1!
+}
+form .group input,
+form .group textarea,
+form .group select{
+  @apply border bg-slate-50 dark:bg-transparent border-slate-200 dark:border-slate-700 focus:border-primary text-gray-600 dark:text-darktext1 font-normal rounded-lg py-2 px-4 focus:outline-0 focus:bg-transparent
+}
+
+form .group select{
+  -webkit-appearance: none;  /* Safari and Chrome */
+  -moz-appearance: none;     /* Firefox */
+  appearance: none;     
+}
+.dark form .group select{
+  -webkit-appearance: none;  /* Safari and Chrome */
+  -moz-appearance: none;     /* Firefox */
+  appearance: none;     
+  background-color: black;
+
+  /* background-image: url("data:image/svg+xml,%3Csvg fill='%23000' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E"); */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+}
+
+
+/* Contact Page CSS End */

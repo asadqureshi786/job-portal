@@ -5,7 +5,7 @@ import { BsInstagram } from "react-icons/bs";
 
 export default function Footer() {
   return (
-    <section className="web bg-black border-t border-white  dark:border-slate-700 mt-0!">
+    <section className="web bg-black border-t border-white  dark:border-slate-900 mt-0!">
       <div className="container">
         <div className="flex items-center flex-col gap-10">
           <a href="" className="logo text-5xl text-white! ">
