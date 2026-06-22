@@ -118,6 +118,7 @@ export default function Landing() {
 
   return (
     <>
+      {/* Just commit add */}
       <Banner />
       <div className="container my-15">
         <div className="flex justify-between items-center flex-wrap">
