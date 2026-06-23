@@ -10,11 +10,19 @@ import FindJob from '../pages/FindJob';
 import Contact from '../pages/Contact';
 import Blogs from '../pages/Blogs';
 
+// Auth
+import Register from '../pages/auth/Register'
+
 
 export default function router() {
   return (
     <BrowserRouter>
         <Routes>
+
+            {/* Auth */}
+            <Route path='register' element={<Register />}/>
+
+            {/* Website */}
             <Route path='/' element={<WebLayout/>}>
                 <Route path='' element={<Home />}/>
                 <Route path='home' element={<Home />}/>

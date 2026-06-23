@@ -51,9 +51,9 @@ export default function Header() {
               </ul>
             </div>
             <div className="flex gap-5 relative z-99">
-              <button className="text-base hover:text-primary font-normal text-white transition-all cursor-pointer">
+              <NavLink to="register" className="text-base items-center flex hover:text-primary font-normal text-white transition-all cursor-pointer">
                 Register
-              </button>
+              </NavLink>
               <div className="bg-white/50 p-1 rounded-full">
                 <button className="btn btn-primary font-medium cursor-pointer text-primary bg-white hover:bg-primary hover:text-white transition-all px-6 py-1.5 rounded-full">
                   Login
