@@ -172,8 +172,8 @@ section.web{
   @apply opacity-0 scale-0 transition-all 
 }
 .side-filter .item.checkbox-to label input[type="checkbox"]:checked+ div{
-  @apply bg-primary text-white
-}
+  @apply bg-primary text-white border-primary
+} 
 .side-filter .item.checkbox-to label input[type="checkbox"]:checked+ div .check{
   @apply opacity-100 scale-100 
 }
