@@ -233,3 +233,16 @@ form .group select{
 
 
 /* Contact Page CSS End */
+
+
+/* Register Page CSS Start */
+form .groups{
+  @apply w-full;
+}
+form .groups label{
+  @apply 4xl:text-sm text-sm mb-10! text-slate-500;
+}
+form .groups input{
+  @apply relative border border-gray-200 rounded-md 4xl:py-2 py-2 focus:outline-none px-3 text-gray-600 dark:text-darktext1 font-normal 4xl:text-base text-sm w-full mt-1
+}
+/* Register Page CSS End */
