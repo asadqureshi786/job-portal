@@ -13,7 +13,7 @@ export default function Register() {
           <div className="bg-gradient-to-b from-black/60 to-primary absolute inset-0 animate-pulse"></div>
         </div>
         <div className="lg:col-span-6 col-span-12 flex justify-center items-center flex-col ">
-          <div className="4xl:w-[60%] w-[70%] py-10 ">
+          <div className="4xl:w-[60%] w-[55%] py-10 ">
             <div className="text-center ">
               <h2 className="4xl:text-5xl text-4xl font-bold text-gray-800 dark:text-white">
                 Create Your <span className="g-text" >Account</span>   
@@ -30,7 +30,7 @@ export default function Register() {
                   name="account-type"
                   defaultChecked
                 />
-                <div onClick={()=>setTabs('seeker')} className="4xl:text-[15px] text-sm transition-all border border-gray-300 bg-transparent text-black   rounded-lg flex items-center justify-center px-5 py-1.5 cursor-pointer peer-checked:bg-black peer-checked:text-white dark:peer-checked:border-primary transition-all hover:bg-gray-100 cursor-pointer peer-checked:hover:bg-black">
+                <div onClick={()=>setTabs('seeker')} className="4xl:text-[15px] text-sm transition-all border border-gray-300 dark:border-gray-800 dark:hover:bg-primary bg-transparent text-black dark:text-slate-300   rounded-lg flex items-center justify-center px-5 py-1.5 cursor-pointer peer-checked:bg-black peer-checked:text-white dark:peer-checked:border-primary transition-all hover:bg-gray-100 cursor-pointer peer-checked:hover:bg-black">
                   Job Seeker
                 </div>
               </label>
@@ -40,7 +40,7 @@ export default function Register() {
                   className="hidden peer"
                   name="account-type"
                 />
-                <div onClick={()=>setTabs('poster')} className="4xl:text-[15px] text-sm transition-all border border-gray-300 bg-transparent text-black   rounded-lg flex items-center justify-center px-5 py-1.5 cursor-pointer peer-checked:bg-black peer-checked:text-white dark:peer-checked:border-primary transition-all hover:bg-gray-100 cursor-pointer peer-checked:hover:bg-black">
+                <div onClick={()=>setTabs('poster')} className="4xl:text-[15px] text-sm transition-all border border-gray-300 dark:border-gray-800 dark:hover:bg-primary bg-transparent text-black dark:text-slate-300   rounded-lg flex items-center justify-center px-5 py-1.5 cursor-pointer peer-checked:bg-black peer-checked:text-white dark:peer-checked:border-primary transition-all hover:bg-gray-100 cursor-pointer peer-checked:hover:bg-black">
                   Job Poster
                 </div>
               </label>
@@ -49,10 +49,10 @@ export default function Register() {
             {/* Job Seeker */}
             <div className={`job_seeker 4xl:px-5 ${tabs == 'seeker' ? 'opacity-100 block visible max-h-full' : 'opacity-0 hidden invisible max-h-0'}`}>
               <form className="w-full mt-7 flex flex-col 4xl:gap-5 gap-3">
-                <div className="groups">
+                {/* <div className="groups">
                   <label>Name</label>
                   <input type="text" />
-                </div>
+                </div> */}
                 <div className="groups">
                   <label>Email Address</label>
                   <input type="email" />
@@ -75,11 +75,12 @@ export default function Register() {
                 Or Register With
               </p>
               <div className="grid grid-cols-2 items-center gap-2">
-                <button className="w-full flex justify-center items-center gap-3 text-base gray-300 rounded-md border border-gray-200 py-1.5 px-5 transition-all hover:bg-gray-100 cursor-pointer">
+                <button className="w-full flex justify-center items-center gap-3 text-base gray-300 rounded-md border border-gray-200 dark:border-gray-900 dark:text-slate-300 py-1.5 px-5 transition-all hover:bg-gray-100 cursor-pointer">
                   <img src="/img/c_logo/google.png" className="w-4.5" />
                   Google</button>
-                <button className="full  flex justify-center items-center gap-3 text-base gray-300 rounded-md border border-gray-200 py-1.5 px-5 transition-all hover:bg-gray-100 cursor-pointer">
-                  <img src="/img/c_logo/apple.png" className="w-4.5" />
+                <button className="full  flex justify-center items-center gap-3 text-base gray-300 rounded-md border border-gray-200 dark:border-gray-900 dark:text-slate-300 py-1.5 px-5 transition-all hover:bg-gray-100 cursor-pointer">
+                  <img src="/img/c_logo/apple.png" className="w-4.5 bloack dark:hidden!" />
+                      <img src="/img/c_logo/apple-darl.png" className="w-4.5 hidden dark:block!" />
                   Google</button>
               </div>
               <p className="text-center text-gray-500 font-thin font-Anton mb-0 py-6 text-sm">
@@ -117,11 +118,12 @@ export default function Register() {
                 Or Register With
               </p>
               <div className="grid grid-cols-2 items-center gap-2">
-                <button className="w-full flex justify-center items-center gap-3 text-base gray-300 rounded-md border border-gray-200 py-1.5 px-5 transition-all hover:bg-gray-100 cursor-pointer">
+                <button className="w-full flex justify-center items-center gap-3 text-base gray-300 rounded-md border border-gray-200 dark:border-gray-900 dark:text-slate-300 py-1.5 px-5 transition-all hover:bg-gray-100 cursor-pointer">
                   <img src="/img/c_logo/google.png" className="w-4.5" />
                   Google</button>
-                <button className="full  flex justify-center items-center gap-3 text-base gray-300 rounded-md border border-gray-200 py-1.5 px-5 transition-all hover:bg-gray-100 cursor-pointer">
-                  <img src="/img/c_logo/apple.png" className="w-4.5" />
+                <button className="full  flex justify-center items-center gap-3 text-base gray-300 rounded-md border border-gray-200 dark:border-gray-900 dark:text-slate-300 py-1.5 px-5 transition-all hover:bg-gray-100 cursor-pointer">
+                  <img src="/img/c_logo/apple.png" className="w-4.5 bloack dark:hidden!" />
+                      <img src="/img/c_logo/apple-darl.png" className="w-4.5 hidden dark:block!" />
                   Google</button>
               </div>
               <p className="text-center text-gray-500 font-thin font-Anton mb-0 py-6 text-sm">

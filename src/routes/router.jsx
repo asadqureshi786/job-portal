@@ -12,6 +12,7 @@ import Blogs from '../pages/Blogs';
 
 // Auth
 import Register from '../pages/auth/Register'
+import Login from '../pages/auth/Login'
 
 
 export default function router() {
@@ -21,6 +22,7 @@ export default function router() {
 
             {/* Auth */}
             <Route path='register' element={<Register />}/>
+            <Route path='login' element={<Login />}/>
 
             {/* Website */}
             <Route path='/' element={<WebLayout/>}>
