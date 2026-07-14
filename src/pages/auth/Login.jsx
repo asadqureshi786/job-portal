@@ -16,10 +16,10 @@ export default function Login() {
           <div className="4xl:w-[60%] w-[55%] py-10 ">
             <div className="text-center ">
               <h2 className="4xl:text-5xl text-4xl font-bold text-gray-800 dark:text-white">
-                 <span className="g-text" >Welcome</span> Back   
+                 <span className="g-text-animation" >Welcome</span> Back   
               </h2>
               <p className="4xl:text-base text-sm mt-3 dark:text-white">
-                Enter your details to create an account
+                Enter your details to login account
               </p>
             </div>
           
@@ -42,7 +42,7 @@ export default function Login() {
                 <button className="btn btn-primary bg-primary text-white rounded-md py-2 transition-all hover:bg-black cursor-pointer" >Login</button>
               </form>
               <p className="text-center text-gray-500 font-thin font-Anton mb-0 py-6 text-sm cursor-pointer">
-                Or Register With
+                Or 
               </p>
               <div className="grid grid-cols-2 items-center gap-2">
                 <button className="w-full flex justify-center items-center gap-3 text-base gray-300 rounded-md border border-gray-200 dark:border-gray-900 dark:text-slate-300 py-1.5 px-5 transition-all hover:bg-gray-100 cursor-pointer">
