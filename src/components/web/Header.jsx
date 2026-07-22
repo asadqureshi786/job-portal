@@ -54,7 +54,7 @@ export default function Header() {
               <NavLink to="register" className="text-base items-center flex hover:text-primary font-normal text-white transition-all cursor-pointer">
                 Register
               </NavLink>
-              <div className="bg-white/50 p-1 rounded-full">
+              <div className="bg-white/50 px-1 py-2 rounded-full">
                 <NavLink to="login" className="btn btn-primary font-medium cursor-pointer text-primary bg-white hover:bg-primary hover:text-white transition-all px-6 py-2! rounded-full">
                   Login
                 </NavLink>
