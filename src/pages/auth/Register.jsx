@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import { NavLink } from "react-router";
+
 import ThemeBox from "../../components/ThemeBox";
 import SocialButton from "../../components/SocialButton";
 
@@ -77,7 +79,7 @@ export default function Register() {
               </p>
              <SocialButton/>
               <p className="text-center text-gray-500 font-thin font-Anton mb-0 py-6 text-sm">
-                Already Have An Account? <span className="text-primary font-medium" >Sign in</span>
+                Already Have An Account? <NavLink to="/login" className="text-primary font-medium" >Login</NavLink>
               </p>
             </div>
 
@@ -114,7 +116,7 @@ export default function Register() {
               <SocialButton/>
 
               <p className="text-center text-gray-500 font-thin font-Anton mb-0 py-6 text-sm">
-                Already Have An Account? <span className="text-primary font-medium" >Sign in</span>
+                Already Have An Account? <NavLink to="/login" className="text-primary font-medium" >Login</NavLink>
               </p>
             </div>
           </div>

@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import { NavLink } from "react-router";
+
 import ThemeBox from "../../components/ThemeBox";
 import SocialButton from "../../components/SocialButton";
 export default function Login() {
@@ -16,7 +18,7 @@ export default function Login() {
           <div className="4xl:w-[60%] w-[55%] py-10 ">
             <div className="text-center ">
               <h2 className="4xl:text-5xl text-4xl font-bold text-gray-800 dark:text-white">
-                 <span className="g-text-animation" >Welcome</span> Back   
+                 <span className="g-text" >Welcome</span> Back   
               </h2>
               <p className="4xl:text-base text-sm mt-3 dark:text-white">
                 Enter your details to login account
@@ -39,7 +41,7 @@ export default function Login() {
                   <label>Password</label>
                   <input type="password" />
                 </div>
-                <button className="btn btn-primary bg-primary text-white rounded-md py-2 transition-all hover:bg-black cursor-pointer" >Login</button>
+                <NavLink to="" className="btn btn-primary bg-primary text-center text-white rounded-md py-2 transition-all hover:bg-black cursor-pointer" >Login</NavLink>
               </form>
               <p className="text-center text-gray-500 font-thin font-Anton mb-0 py-6 text-sm cursor-pointer">
                 Or 
@@ -50,7 +52,7 @@ export default function Login() {
 
 
               <p className="text-center text-gray-500 font-thin font-Anton mb-0 py-6 text-sm">
-                Don't Have An Account? <span className="text-primary font-medium" >Sign up</span>
+                Don't Have An Account? <NavLink to="/register" className="text-primary font-medium" >Sign up</NavLink>
               </p>
             </div>
 
