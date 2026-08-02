@@ -72,6 +72,10 @@ h1,h2,h3,h4,h5,h6{
   font-family: var(--font-PlayFair);
 }
 
+.crm-wrapper{
+  @apply opacity-100
+}
+
 .g-text {
   background: #A053ED;
   background: linear-gradient(90deg,rgba(160, 83, 237, 0.61) 0%, rgba(160, 83, 237, 1) 50%);

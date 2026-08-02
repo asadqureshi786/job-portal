@@ -21,7 +21,7 @@ import C_Dashboard from "../pages/company/Dashboard";
 // Company Routes
 const routesLinks = [
   {
-    path: "company",
+    path: "dashboard",
     layout: <CRMLayout />,
     children: [{ path: "", element: <C_Dashboard /> }],
   },
