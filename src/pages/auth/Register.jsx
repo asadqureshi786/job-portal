@@ -72,7 +72,7 @@ export default function Register() {
                   <label>Confrim Password</label>
                   <input type="password" />
                 </div>
-                <button className="btn btn-primary bg-primary text-white rounded-md py-2 transition-all hover:bg-black cursor-pointer" >Register</button>
+                <button className="btn btn-primary bg-primary text-white rounded-md py-2 transition-all hover:bg-black dark:hover:bg-white/10 cursor-pointer" >Register</button>
               </form>
               <p className="text-center text-gray-500 font-thin font-Anton mb-0 py-6 text-sm cursor-pointer">
                 Or Register With
@@ -107,7 +107,7 @@ export default function Register() {
                   <label>Confrim Password</label>
                   <input type="password" />
                 </div>
-                <button className="btn btn-primary bg-primary text-white rounded-md py-2 transition-all hover:bg-black cursor-pointer" >Register</button>
+                <button className="btn btn-primary bg-primary text-white rounded-md py-2 transition-all hover:bg-black dark:hover:bg-white/10 cursor-pointer" >Register</button>
               </form>
               <p className="text-center text-gray-500 font-thin font-Anton mb-0 py-6 text-sm cursor-pointer">
                 Or Register With

@@ -5,6 +5,9 @@
 /* Oswald */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
+/* Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 /* Roboto */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -36,6 +39,7 @@
 
 @theme{
     /* fonts */
+    --font-Inter: "Inter", sans-serif;
     --font-Roboto : "Roboto", sans-serif;
     --font-Mons: "Montserrat", system-ui, sans-serif;
     --font-oswald: "Oswald", sans-serif;
@@ -49,6 +53,14 @@
     --color-primary: var(--primary);
     --color-secondary: var(--secondary);
     --color-darkbg1 : #1a1a1a;
+    /* --color-crmDarkbg1 : #11171d; */
+
+    /* CRM */
+    --color-crmBodyHeader: #000;
+    --color-crmDarkbg1 : #0c0f12;
+    --color-cHoverDbg:#1d242a;
+    /* #121212; */
+
 
 
     /* Text Colors */
@@ -73,8 +85,13 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .crm-wrapper{
-  @apply opacity-100
+  @apply opacity-100 bg-[#f8fcff] dark:bg-crmBodyHeader;
+  span,p,a,h1,h2,div{
+    @apply font-Inter ;
+  }
 }
+
+
 
 .g-text {
   background: #A053ED;

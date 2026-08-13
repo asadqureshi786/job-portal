@@ -16,7 +16,9 @@ export default function CRMLayout() {
         <CRMSidebar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
         <div className={`relative transition-all duration-300  ${isSidebarOpen ? '4xl:ms-75 lg:ms-65' : '4xl:ms-20 lg:ms-20'} z-3 pb-6`}>
           <CRMHeader />
-          <Outlet />
+          <div className="m-7.5" >
+            <Outlet />
+          </div>
         </div>
       </div>
       <ThemeBox />

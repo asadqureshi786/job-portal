@@ -43,19 +43,19 @@ export default function CRMSidebar({ isSidebarOpen, setIsSidebarOpen }) {
 
   return (
     <div
-      className={`fixed top-0 left-0 bottom-0 transition-all duration-300 ${isSidebarOpen ? "4xl:w-75 lg:w-65" : "4xl:w-20 lg:w-20"}  bg-black border-r border-black dark:border-primary`}
+      className={`fixed top-0 left-0 bottom-0 transition-all duration-300 ${isSidebarOpen ? "4xl:w-75 lg:w-65" : "4xl:w-20 lg:w-20"} z-99  bg-crmDarkbg1 border-r border-black dark:border-gray-900 `}
     >
       <div
         to="/company"
-        className={`logo relative 4xl:text-[26px] text-3xl ${isSidebarOpen ? '4xl:px-7 px-4 justify-between' : 'text-center justify-center'}  h-16 flex items-center  border-b border-gray-700 w-full`}
+        className={`logo relative 4xl:text-[26px] text-3xl ${isSidebarOpen ? '4xl:px-7 px-4 justify-between' : 'text-center justify-center'}  h-16 flex items-center  border-b border-gray-900 w-full`}
       >
         {isSidebarOpen ? (
           <Link to="/company" className="font-bold text-white">
-            Hire<span className="text-primary">Akho.</span>
+            Hire<span className="text-primary!">Akho.</span>
           </Link>
         ) : (
           <Link to="/company" className="font-bold text-white">
-            H<span className="text-primary">A</span>
+            H<span className="text-primary!">A</span>
           </Link>
         )}
         <div
@@ -67,21 +67,21 @@ export default function CRMSidebar({ isSidebarOpen, setIsSidebarOpen }) {
       </div>
 
       <div className="sideBar mt-7 px-4   ">
-        <ul className="4xl:space-y-2 space-y-1">
+        <ul className="4xl:space-y-2 space-y-1.5">
           {sideItem.map((item, index) => (
             <li key={index} className={`${isSidebarOpen ? "" : "text-center"}`}>
               <NavLink
                 to={item.url}
                 className={({ isActive }) =>
-                  `flex items-center ${isSidebarOpen ? "4xl:px-4 px-3" : "justify-center mx-auto 4xl:px-3 px-2 w-fit"} py-2  rounded-md gap-3 4xl:text-base text-[15px] transition-all ${
+                  `flex items-center ${isSidebarOpen ? "4xl:px-4 px-3" : "justify-center mx-auto 4xl:px-3 px-3 w-fit"} py-2  rounded-lg gap-3 4xl:text-base text-[14px] transition-all ${
                     isActive
-                      ? "text-white bg-primary/60"
-                      : "text-white hover:text-white hover:bg-primary/60"
+                      ? "text-white bg-cHoverDbg"
+                      : "text-white hover:text-white hover:bg-cHoverDbg"
                   }`
                 }
               >
-                <span className="text-lg">{item.icon}</span>
-                {isSidebarOpen && <span className="">{item.title}</span>}
+                <span className="text-sm">{item.icon}</span>
+                {isSidebarOpen && <span className="text-sm">{item.title}</span>}
               </NavLink>
             </li>
           ))}

@@ -41,7 +41,7 @@ export default function Login() {
                   <label>Password</label>
                   <input type="password" />
                 </div>
-                <NavLink to="" className="btn btn-primary bg-primary text-center text-white rounded-md py-2 transition-all hover:bg-black cursor-pointer" >Login</NavLink>
+                <NavLink to="" className="btn btn-primary bg-primary text-center text-white rounded-md py-2 transition-all hover:bg-black dark:hover:bg-white/10 cursor-pointer" >Login</NavLink>
               </form>
               <p className="text-center text-gray-500 font-thin font-Anton mb-0 py-6 text-sm cursor-pointer">
                 Or 
