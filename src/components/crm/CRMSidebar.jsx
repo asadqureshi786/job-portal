@@ -9,6 +9,13 @@ import { SlPeople } from "react-icons/sl";
 import { PiCubeDuotone } from "react-icons/pi";
 import { IoSettingsOutline } from "react-icons/io5";
 
+// New Icons
+import { GoHomeFill } from "react-icons/go";
+import { BiSolidFileFind } from "react-icons/bi";
+import { IoPeople } from "react-icons/io5";
+import { PiCubeFill } from "react-icons/pi";
+import { IoMdSettings } from "react-icons/io";
+
 import { SlArrowLeft } from "react-icons/sl";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
@@ -16,29 +23,30 @@ export default function CRMSidebar({ isSidebarOpen, setIsSidebarOpen }) {
   const sideItem = [
     {
       title: "Dashboard",
-      icon: <IoHomeOutline />,
+      icon: <GoHomeFill />,
       url: "/dashboard",
     },
     {
       title: "Jobs",
-      icon: <RiPhoneFindLine />,
+      icon: <BiSolidFileFind />,
       url: "/jobs",
     },
     {
       title: "Applicants",
-      icon: <SlPeople />,
+      icon: <IoPeople />,
       url: "/applicants",
     },
     {
       title: "Company Porfile",
-      icon: <PiCubeDuotone />,
+      icon: <PiCubeFill />,
       url: "/company-profile",
     },
     {
       title: "Settings",
-      icon: <IoSettingsOutline />,
+      icon: <IoMdSettings />,
       url: "/settings",
     },
+    
   ];
 
   return (
@@ -47,7 +55,7 @@ export default function CRMSidebar({ isSidebarOpen, setIsSidebarOpen }) {
     >
       <div
         to="/company"
-        className={`logo relative 4xl:text-[26px] text-3xl ${isSidebarOpen ? '4xl:px-7 px-4 justify-between' : 'text-center justify-center'}  h-16 flex items-center  border-b border-gray-900 w-full`}
+        className={`logo relative 4xl:text-[26px] text-3xl ${isSidebarOpen ? "4xl:px-7 px-4 justify-between" : "text-center justify-center"}  h-16 flex items-center  border-b border-gray-900 w-full`}
       >
         {isSidebarOpen ? (
           <Link to="/company" className="font-bold text-white">
@@ -66,8 +74,13 @@ export default function CRMSidebar({ isSidebarOpen, setIsSidebarOpen }) {
         </div>
       </div>
 
-      <div className="sideBar mt-7 px-4   ">
-        <ul className="4xl:space-y-2 space-y-1.5">
+      <div className="sideBar mt-5 px-4">
+          {isSidebarOpen && (
+            <span className="text-slate-600 text-xs font-medium font-Mons!">
+          Navigation
+        </span>
+          )}
+        <ul className="4xl:space-y-2 space-y-1.5 mt-2">
           {sideItem.map((item, index) => (
             <li key={index} className={`${isSidebarOpen ? "" : "text-center"}`}>
               <NavLink
@@ -80,8 +93,21 @@ export default function CRMSidebar({ isSidebarOpen, setIsSidebarOpen }) {
                   }`
                 }
               >
-                <span className="text-sm">{item.icon}</span>
-                {isSidebarOpen && <span className="text-sm">{item.title}</span>}
+                {({ isActive }) => (
+                  <>
+                    <span
+                      className={`text-base ${  
+                        isActive ? "text-primary" : "text-white"
+                      }`}
+                    >
+                      {item.icon}
+                    </span>
+
+                    {isSidebarOpen && (
+                      <span className="text-sm">{item.title}</span>
+                    )}
+                  </>
+                )}
               </NavLink>
             </li>
           ))}

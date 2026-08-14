@@ -84,13 +84,6 @@ h1,h2,h3,h4,h5,h6{
   font-family: var(--font-PlayFair);
 }
 
-.crm-wrapper{
-  @apply opacity-100 bg-[#f8fcff] dark:bg-crmBodyHeader;
-  span,p,a,h1,h2,div{
-    @apply font-Inter ;
-  }
-}
-
 
 
 .g-text {
@@ -296,3 +289,52 @@ form .groups input{
   @apply relative border border-gray-200 dark:border-gray-900 rounded-md 4xl:py-2 py-2 focus:outline-none px-3 text-gray-600 dark:text-darktext1 font-normal 4xl:text-base text-sm w-full mt-1
 }
 /* Register Page CSS End */
+
+
+
+
+/* CRM Style Start */
+.crm-wrapper{
+  .card{
+    @apply border border-gray-200 dark:border-crmDarkbg1 bg-white dark:bg-crmDarkbg1  rounded-lg;
+  }
+  @apply opacity-100 bg-[#f8fcff] dark:bg-crmBodyHeader;
+  span,p,a,h1,h2,div{
+    @apply font-Inter;
+  }
+  p{
+    @apply dark:text-slate-200;
+  }
+  .animate-border-beam{
+    animation-name: roundedFill;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  @keyframes roundedFill {
+    0%{
+      top:0;
+      left:0;
+    }
+    25%{
+      top:0;
+      right:0;
+      left:unset;
+    }
+    50%{
+      top:unset;
+      left:unset;
+      bottom:0;
+      right:0
+    }
+    75%{
+      top:0;
+      left:0;
+    }
+    100%{
+      top:0;
+      left:0;
+    }
+  }
+}

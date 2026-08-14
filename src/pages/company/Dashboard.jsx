@@ -32,7 +32,8 @@ export default function Dashboard() {
     icon: <MdPeopleAlt />,
     count: 156,
     iconColor: 'text-purple-500 bg-purple-100 dark:bg-gray-800'
-  }
+  },
+
 ])
 
   return (
@@ -41,7 +42,8 @@ export default function Dashboard() {
         <ul className='grid lg:grid-cols-4 grid-cols-1 gap-5' >
           {
             topCard.map((item,index)=>(
-              <li className='flex items-center gap-5 border border-gray-200 dark:border-crmDarkbg1 bg-white dark:bg-crmDarkbg1  rounded-lg px-5 pt-2 pb-4' >
+              <li className='card relative flex items-center gap-5 border border-primary/15! px-5! pt-4! pb-4!' >
+                {/* <div className='absolute top-0 left-0 w-[150px] h-[1px] bg-gradient-to-l from-transparent via-white to-transparent animate-border-beams' ></div> */}
               <div className='flex items-center gap-3'>
                   <div className={`flex gap-3  ${item.iconColor} ${item.iconColor} size-10 flex items-center justify-center rounded-full text-lg`}>
                 {
@@ -50,7 +52,7 @@ export default function Dashboard() {
                   </div>
               </div>
               <div>
-                <p className=' 4xl:text-3xl text-2xl font-medium leading-normal' >{item.count}+</p>
+                <p className=' 4xl:text-3xl text-2xl font-medium ' >{item.count}+</p>
                 <span className='text-gray-500 text-xs font-noraml whitespace-nowrap uppercase' >{item.title}</span>
               </div>
             </li>
