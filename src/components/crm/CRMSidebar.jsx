@@ -42,11 +42,16 @@ export default function CRMSidebar({ isSidebarOpen, setIsSidebarOpen }) {
       url: "/company-profile",
     },
     {
+      title: "Support",
+      icon: <IoMdSettings />,
+      url: "/support",
+    },
+
+    {
       title: "Settings",
       icon: <IoMdSettings />,
       url: "/settings",
     },
-    
   ];
 
   return (
@@ -73,45 +78,104 @@ export default function CRMSidebar({ isSidebarOpen, setIsSidebarOpen }) {
           {!isSidebarOpen ? <MdKeyboardArrowRight /> : <MdKeyboardArrowLeft />}
         </div>
       </div>
-
-      <div className="sideBar mt-5 px-4">
+      <div className="sideBar mt-5 px-4 h-[calc(100vh-64px)] flex flex-col">
+        {/* Main Navigation */}
+        <div>
           {isSidebarOpen && (
             <span className="text-slate-600 text-xs font-medium font-Mons!">
-          Navigation
-        </span>
+              Navigation
+            </span>
           )}
-        <ul className="4xl:space-y-2 space-y-1.5 mt-2">
-          {sideItem.map((item, index) => (
-            <li key={index} className={`${isSidebarOpen ? "" : "text-center"}`}>
-              <NavLink
-                to={item.url}
-                className={({ isActive }) =>
-                  `flex items-center ${isSidebarOpen ? "4xl:px-4 px-3" : "justify-center mx-auto 4xl:px-3 px-3 w-fit"} py-2  rounded-lg gap-3 4xl:text-base text-[14px] transition-all ${
-                    isActive
-                      ? "text-white bg-cHoverDbg"
-                      : "text-white hover:text-white hover:bg-cHoverDbg"
-                  }`
-                }
-              >
-                {({ isActive }) => (
-                  <>
-                    <span
-                      className={`text-base ${  
-                        isActive ? "text-primary" : "text-white"
-                      }`}
-                    >
-                      {item.icon}
-                    </span>
 
-                    {isSidebarOpen && (
-                      <span className="text-sm">{item.title}</span>
-                    )}
-                  </>
-                )}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
+          <ul className="4xl:space-y-2 space-y-1.5 mt-2">
+            {sideItem.slice(0, 4).map((item, index) => (
+              <li
+                key={index}
+                className={`${isSidebarOpen ? "" : "text-center"}`}
+              >
+                <NavLink
+                  to={item.url}
+                  className={({ isActive }) =>
+                    `flex items-center ${
+                      isSidebarOpen
+                        ? "4xl:px-4 px-3"
+                        : "justify-center mx-auto 4xl:px-3 px-3 w-fit"
+                    } py-2 rounded-lg gap-3 4xl:text-base text-[14px] transition-all ${
+                      isActive
+                        ? "text-white bg-cHoverDbg"
+                        : "text-white hover:text-white hover:bg-cHoverDbg"
+                    }`
+                  }
+                >
+                  {({ isActive }) => (
+                    <>
+                      <span
+                        className={`text-base ${
+                          isActive ? "text-primary" : "text-white"
+                        }`}
+                      >
+                        {item.icon}
+                      </span>
+
+                      {isSidebarOpen && (
+                        <span className="text-sm">{item.title}</span>
+                      )}
+                    </>
+                  )}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Bottom Navigation */}
+        <div className="mt-auto pb-10">
+          {isSidebarOpen && (
+            <span className="text-slate-600 text-xs font-medium font-Mons!">
+              Others
+            </span>
+          )}
+
+          <ul className="4xl:space-y-2 space-y-1.5 mt-2">
+            {sideItem.slice(4).map((item, index) => (
+              <li
+                key={index}
+                className={`${isSidebarOpen ? "" : "text-center"}`}
+              >
+                <NavLink
+                  to={item.url}
+                  className={({ isActive }) =>
+                    `flex items-center ${
+                      isSidebarOpen
+                        ? "4xl:px-4 px-3"
+                        : "justify-center mx-auto 4xl:px-3 px-3 w-fit"
+                    } py-2 rounded-lg gap-3 4xl:text-base text-[14px] transition-all ${
+                      isActive
+                        ? "text-white bg-cHoverDbg"
+                        : "text-white hover:text-white hover:bg-cHoverDbg"
+                    }`
+                  }
+                >
+                  {({ isActive }) => (
+                    <>
+                      <span
+                        className={`text-base ${
+                          isActive ? "text-primary" : "text-white"
+                        }`}
+                      >
+                        {item.icon}
+                      </span>
+
+                      {isSidebarOpen && (
+                        <span className="text-sm">{item.title}</span>
+                      )}
+                    </>
+                  )}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

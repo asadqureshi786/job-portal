@@ -58,7 +58,7 @@
     /* CRM */
     --color-crmBodyHeader: #000;
     --color-crmDarkbg1 : #0c0f12;
-    --color-cHoverDbg:#1d242a;
+    --color-crmDarkbg2 : #13181c;
     /* #121212; */
 
 
@@ -338,3 +338,47 @@ form .groups input{
     }
   }
 }
+
+
+
+/* Data Table Component CSS Start  */
+.tm-data-table{
+    & .rdt_Table {
+      box-shadow: none !important;
+      border: none !important;
+    }
+     & .rdt_TableHead, & .rdt_TableHeadRow {
+      @apply text-white font-bold  bg-crmDarkbg2  border-0 uppercase font-normal px-1.5;
+      .rdt_columnText{
+        @apply font-bold;
+      }
+    }
+    & .rdt_TableBody .rdt_TableRow {
+      @apply dark:text-white  dark:bg-crmDarkbg1 py-5 border-b dark:border-primary/15 border-gray-200 px-3;
+      .rdt_cellBase{
+        @apply border-0;
+      }
+    }
+    & .rdt_pagination.rdt_Pagination{
+      @apply dark:text-white dark:bg-crmDarkbg2;
+    }
+    & .rdt_responsiveWrapperFixed{
+      &::-webkit-scrollbar{
+        @apply w-1!;
+      }
+      &::-webkit-scrollbar-track{
+        @apply w-1! bg-crmDarkbg2;
+      }
+      &::-webkit-scrollbar-thumb{
+        /* @apply w-1! bg-primary/20 rounded-full; */
+        @apply bg-gray-800
+      }
+    }
+}
+
+.action-box{
+  @apply dark:bg-crmDarkbg2 bg-gray-300 p-1.5 rounded-lg text-[15px] text-blue-500  dark:hover:text-blue-700 mr-2 transition-all;
+}
+
+/* border border-gray-200 dark:border-crmDarkbg1 bg-white */
+/* Data Table Component CSS End */
