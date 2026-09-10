@@ -12,13 +12,13 @@ export default function TableHead({title,subText,children}) {
             <p className='text-[13px] text-slate-300!' >{subText}</p>
         </div>
         <div className='flex items-center gap-5'>
-          {children}
           <div>
             <div className='flex items-center flex-row-reverse gap-3 border-[2px] bg-crmDarkbg1 dark:text-gray-400 px-4 py-1.5 border-gray-800 rounded-lg' >
                 <input className=" text-[15px]   focus:outline-0" placeholder='Search' />
                 <span className='text-gray-600' ><VscSearch/></span>
             </div>
           </div>
+          {children}
         </div>
     </div>
   )
