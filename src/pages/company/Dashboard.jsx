@@ -304,7 +304,7 @@ const ApplicationsData = [
                 {/* <div className='absolute top-0 left-0 w-[150px] h-[1px] bg-gradient-to-l from-transparent via-white to-transparent animate-border-beams' ></div> */}
                 <div className="flex items-center gap-3">
                   <div
-                    className={`flex gap-3  ${item.iconColor} ${item.iconColor} size-10 flex items-center justify-center rounded-full text-lg`}
+                    className={`flex gap-3 ${item.iconColor} size-10 flex items-center justify-center rounded-full text-lg`}
                   >
                     {item.icon}
                   </div>
@@ -359,7 +359,7 @@ const ApplicationsData = [
             <span className="text-base" ><IoCheckmarkCircleOutline/></span> Recent Applications
           </Tab>
         </TabList>
-         <div className="rounded-[16px] overflow-hidden mt-2">
+         <div className=" mt-2">
              <TabPanels className=" text-white">
           <TabPanel> 
             <div className="tm-data-table">

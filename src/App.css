@@ -343,6 +343,7 @@ form .groups input{
 
 /* Data Table Component CSS Start  */
 .tm-data-table{
+  @apply rounded-[16px] overflow-hidden;
     & .rdt_Table {
       box-shadow: none !important;
       border: none !important;
@@ -350,13 +351,13 @@ form .groups input{
      & .rdt_TableHead, & .rdt_TableHeadRow {
       @apply text-white font-bold  bg-crmDarkbg2  border-0 uppercase font-normal px-1.5;
       .rdt_columnText{
-        @apply font-bold;
+        @apply font-bold  ;
       }
     }
     & .rdt_TableBody .rdt_TableRow {
       @apply dark:text-white  dark:bg-crmDarkbg1 py-5 border-b dark:border-primary/15 border-gray-200 px-3;
       .rdt_cellBase{
-        @apply border-0;
+        @apply border-0 dark:text-slate-300!;
       }
     }
     & .rdt_pagination.rdt_Pagination{
@@ -377,7 +378,15 @@ form .groups input{
 }
 
 .action-box{
-  @apply dark:bg-crmDarkbg2 bg-gray-300 p-1.5 rounded-lg text-[15px] text-blue-500  dark:hover:text-blue-700 mr-2 transition-all;
+  @apply dark:bg-crmDarkbg2 cursor-pointer bg-gray-300 p-1.5 rounded-lg text-[15px] text-blue-500  dark:hover:text-blue-700 mr-2 transition-all;
+}
+
+.header-btn{
+  @apply h-[100%] ps-3 pe-5 rounded-md  text-white text-sm py-[7px] flex items-center gap-2 cursor-pointer;
+  &.primary{
+    @apply dark:bg-primary/20 bg-primary/100 dark:hover:bg-primary/30 transition-all;
+  }
+
 }
 
 /* border border-gray-200 dark:border-crmDarkbg1 bg-white */

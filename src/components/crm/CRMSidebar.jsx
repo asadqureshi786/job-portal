@@ -102,8 +102,8 @@ export default function CRMSidebar({ isSidebarOpen, setIsSidebarOpen }) {
                         : "justify-center mx-auto 4xl:px-3 px-3 w-fit"
                     } py-2 rounded-lg gap-3 4xl:text-base text-[14px] transition-all ${
                       isActive
-                        ? "text-white bg-cHoverDbg"
-                        : "text-white hover:text-white hover:bg-cHoverDbg"
+                        ? "text-white bg-primary/10"
+                        : "text-white hover:text-white hover:bg-primary/10"
                     }`
                   }
                 >
@@ -151,7 +151,7 @@ export default function CRMSidebar({ isSidebarOpen, setIsSidebarOpen }) {
                         : "justify-center mx-auto 4xl:px-3 px-3 w-fit"
                     } py-2 rounded-lg gap-3 4xl:text-base text-[14px] transition-all ${
                       isActive
-                        ? "text-white bg-cHoverDbg"
+                        ? "text-white bg-primary/10"
                         : "text-white hover:text-white hover:bg-cHoverDbg"
                     }`
                   }

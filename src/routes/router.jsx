@@ -17,13 +17,19 @@ import Login from "../pages/auth/Login";
 
 // Company
 import C_Dashboard from "../pages/company/Dashboard";
+import C_MyJobs from "../pages/company/MyJobs/index";
+import C_Applicants from "../pages/company/Applicants/index";
 
 // Company Routes
 const routesLinks = [
   {
-    path: "dashboard",
+    path: "",
     layout: <CRMLayout />,
-    children: [{ path: "", element: <C_Dashboard /> }],
+    children: [
+      { path: "/dashboard", element: <C_Dashboard /> },
+      { path: "/jobs", element: <C_MyJobs /> },
+      { path: "/applicants", element: <C_Applicants /> }
+    ],
   },
 ];
 

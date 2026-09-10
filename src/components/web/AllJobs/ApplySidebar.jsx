@@ -32,7 +32,7 @@ export default function ApplySidebar({ data }) {
             <div className=" fixed inset-y-0 right-0 flex max-w-full  pl-10">
               <DialogPanel
                 transition
-                className="w-full max-w-md  bg-white dark:bg-darkbg1 border-l overflow-auto border-slate-700 4xl:min-w-[25vw] min-w-[35vw] p-6 backdrop-blur-2xl duration-300 ease-out data-closed:translate-x-125 data-closed:opacity-0"
+                className="w-full max-w-md  bg-white dark:bg-darkbg1 border-l overflow-auto border-slate-700 4xl:min-w-[25vw] min-w-[35vw] p-6 backdrop-blur-2xl duration-300 ease-out data-closed:translate-x-125  data-closed:opacity-0"
               >
                 <div className="flex items-center gap-5 sticky">
                   <div className="bg-gray-100 dark:bg-black dark:group-hover:bg-darkbg1 rounded-xl p-4 flex justify-center items-center">
