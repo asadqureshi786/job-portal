@@ -36,7 +36,7 @@ export default function ApplySidebar({ data }) {
               >
                 <div className="flex items-center gap-5 sticky">
                   <div className="bg-gray-100 dark:bg-black dark:group-hover:bg-darkbg1 rounded-xl p-4 flex justify-center items-center">
-                    <img src={data.logo} className="company-logo w-10" />
+                    <img src={data.logo} className="company-logo w-10" /> x
                   </div>
                   <div>
                     <p className="4xl:text-lg text-base font-semibold text-black! dark:text-darktext1!">

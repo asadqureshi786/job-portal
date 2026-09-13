@@ -134,7 +134,7 @@ export default function index() {
   return (
     <>
       <TableHead title="Applicants" subText="Manage and track Applicatns." >
-        <button className="btn btn-primary">Add Jobs</button>
+        {/* <button className="btn btn-primary">Add Jobs</button> */}
       </TableHead>
       <div className="tm-data-table">
         <DataTable

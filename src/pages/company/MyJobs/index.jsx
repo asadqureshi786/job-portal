@@ -1,4 +1,6 @@
 import React from "react";
+import { useState } from 'react'
+
 import DataTable from "react-data-table-component";
 import TableHead from "../../../components/crm/TableHead";
 import AddJob from "./AddJob";
@@ -8,6 +10,9 @@ import { FaEye } from "react-icons/fa";
 import { HiOutlinePlusSmall } from "react-icons/hi2";
 
 export default function index() {
+
+  let [jobOpen, setJobOpen] = useState(false)
+
   const rcStatusStyles = {
     Closed: "bg-red-800/20 text-red-500",
     Active: "bg-green-900/20 text-green-400",
@@ -137,7 +142,7 @@ export default function index() {
         title="My Jobs"
         subText="Manage and track your posted job listings."
       >
-        <button className="header-btn primary">
+        <button className="header-btn primary"  onClick={() => setJobOpen(true)} >
           {" "}
           <span>
             <HiOutlinePlusSmall />
@@ -154,6 +159,7 @@ export default function index() {
           fixedHeaderScrollHeight="400px"
         />
       </div>
+      <AddJob jobOpen={jobOpen} setJobOpen={setJobOpen} />
     </>
   );
 }

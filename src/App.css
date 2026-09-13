@@ -391,3 +391,25 @@ form .groups input{
 
 /* border border-gray-200 dark:border-crmDarkbg1 bg-white */
 /* Data Table Component CSS End */
+
+
+
+/* CRM Form Design */
+.crmForm{
+  .grid{
+    @apply gap-y-2 gap-x-6;
+  }
+  label{
+    @apply font-Inter! font-normal! text-[14px]!;
+  }
+  .heading{
+    @apply border-b border-primary/30 mb-5 pb-4;
+    h2{
+      @apply font-Inter text-white text-2xl font-medium;
+    }
+    span{
+      @apply font-light text-white text-sm;
+    }
+  }
+}
+/* CRM Form Design */
