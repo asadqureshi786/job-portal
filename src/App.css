@@ -349,23 +349,26 @@ form .groups input{
       border: none !important;
     }
      & .rdt_TableHead, & .rdt_TableHeadRow {
-      @apply text-white font-bold  bg-crmDarkbg2  border-0 uppercase font-normal px-1.5;
+      @apply text-white font-bold  bg-crmDarkbg2  border-0 border-b border-gray-800 uppercase font-normal px-1.5;
       .rdt_columnText{
         @apply font-bold  ;
       }
     }
     & .rdt_TableBody .rdt_TableRow {
-      @apply dark:text-white  dark:bg-crmDarkbg1 py-5 border-b dark:border-primary/15 border-gray-200 px-3;
+      @apply dark:text-white  dark:bg-crmDarkbg1 dark:hover:bg-crmDarkbg2 hover:bg-crmDarkbg2/15 transition-all py-5 border-b dark:border-primary/15 border-gray-200 px-3;
       .rdt_cellBase{
         @apply border-0 dark:text-slate-300!;
       }
     }
     & .rdt_pagination.rdt_Pagination{
       @apply dark:text-white dark:bg-crmDarkbg2;
+      span{
+        @apply text-slate-300!;
+      }
     }
     & .rdt_responsiveWrapperFixed{
       &::-webkit-scrollbar{
-        @apply w-1!;
+        @apply w-1! h-1!;
       }
       &::-webkit-scrollbar-track{
         @apply w-1! bg-crmDarkbg2;
@@ -375,14 +378,24 @@ form .groups input{
         @apply bg-gray-800
       }
     }
+
+    .rdt_paginationPageList{
+      svg{
+        @apply dark:text-slate-500;
+      }
+    }
+    .rdt_selectControl{
+      @apply bg-crmDarkbg1 border-0! text-slate-300!;
+    }
+
 }
 
 .action-box{
-  @apply dark:bg-crmDarkbg2 cursor-pointer bg-gray-300 p-1.5 rounded-lg text-[15px] text-blue-500  dark:hover:text-blue-700 mr-2 transition-all;
+  @apply dark:bg-crmDarkbg2 cursor-pointer bg-primary/30 p-1.5 rounded-lg text-[15px] text-primary  dark:hover:text-blue-700 mr-2 transition-all;
 }
 
 .header-btn{
-  @apply h-[100%] ps-3 pe-5 rounded-md  text-white text-[13.5px] py-[8px] flex items-center gap-2 cursor-pointer;
+  @apply h-[100%] ps-3 pe-5 rounded-md  text-white text-[13.5px] py-[8px] flex items-center gap-1.5 cursor-pointer;
   &.primary{
     @apply dark:bg-primary/20 bg-primary/100 dark:hover:bg-primary/30 border-1 border-primary/30 transition-all;
   }
@@ -399,17 +412,45 @@ form .groups input{
   .grid{
     @apply gap-y-2 gap-x-6;
   }
-  label{
-    @apply font-Inter! font-normal! text-[14px]!;
-  }
   .heading{
     @apply border-b border-primary/30 mb-5 pb-4;
     h2{
       @apply font-Inter text-white text-2xl font-medium;
     }
     span{
-      @apply font-light text-white text-sm;
+      @apply font-light text-sm text-slate-400!;
+    }
+  }
+  form{
+    label{
+      @apply font-Inter! font-normal! text-slate-300! text-[14px]!;
+    }
+    input,select{
+      @apply h-[41px] text-sm font-thin!;
+    }
+  }
+  .modal-bottom{
+    @apply flex justify-end mt-3 mb-1;
+  }
+  .btn{
+    @apply border px-8 py-1.5 rounded-lg font-normal transition-all cursor-pointer;
+    &.btn-secondary{
+      @apply bg-slate-800 text-white border-gray-700;
+    }
+    &.btn-primary{
+         @apply dark:bg-primary/20 bg-primary/100 text-white dark:hover:bg-primary/30 border-1 border-primary/30 transition-all;
+    }
+  }
+  .custom-select{
+    .css-13cymwt-control{
+      @apply border bg-slate-50 dark:bg-transparent border-slate-200 dark:border-slate-700 focus:border-primary text-gray-600 dark:text-darktext1 font-normal rounded-lg h-10 py-0! px-4!;
+    }
+    .css-13cymwt-control:focus{
+      @apply py-0!;
     }
   }
 }
+
+  /* @apply border bg-slate-50 dark:bg-transparent border-slate-200 dark:border-slate-700 focus:border-primary text-gray-600 dark:text-darktext1 font-normal rounded-lg py-2 px-4 focus:outline-0 focus:bg-transparent */
+
 /* CRM Form Design */
