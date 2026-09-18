@@ -385,13 +385,25 @@ form .groups input{
       }
     }
     .rdt_selectControl{
-      @apply bg-crmDarkbg1 border-0! text-slate-300!;
+      @apply bg-crmDarkbg1 rounded-sm border-0! text-slate-300!;
+    }
+    .rdt_selectWrapper{
+      @apply border-0 rounded-lg;
+      svg{
+        @apply text-slate-500;
+      }
     }
 
 }
 
 .action-box{
   @apply dark:bg-crmDarkbg2 cursor-pointer bg-primary/30 p-1.5 rounded-lg text-[15px] text-primary  dark:hover:text-blue-700 mr-2 transition-all;
+  &.edit{
+    @apply bg-green-500/10! text-green-400;
+  }
+  &.delete{
+    @apply bg-red-500/10! text-red-400;
+  }
 }
 
 .header-btn{
@@ -423,10 +435,10 @@ form .groups input{
   }
   form{
     label{
-      @apply font-Inter! font-normal! text-slate-300! text-[14px]!;
+      @apply font-Inter! font-semibold! text-white text-[13px]!;
     }
     input,select{
-      @apply h-[41px] text-sm font-thin!;
+      @apply h-[41px] border-1! text-sm font-thin!;
     }
   }
   .modal-bottom{

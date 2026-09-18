@@ -25,10 +25,10 @@ export default function AddJob({ jobOpen, setJobOpen }) {
       onClose={() => setJobOpen(false)}
       className="relative z-100 bg-red-500 "
     >
-      <div className="fixed  inset-0 flex w-screen items-center justify-center p-10 backdrop-blur-lg">
+      <div className="fixed inset-0 flex w-screen items-center justify-center p-10 backdrop-blur-lg">
         <DialogPanel
           transition
-          className="relative  transition-all 4xl:w-7xl w-full 4xl:h-fit h-fit space-y-4 border-2 border-primary/20 rounded-xl bg-crmDarkbg2 px-9 py-6 data-closed:scale-0"
+          className="relative  transition-all 4xl:w-7xl w-[80%] 4xl:h-fit h-fit space-y-4 border-2 border-primary/20 rounded-xl bg-crmDarkbg2 px-9 py-6 data-closed:scale-0"
         >
           {/* <div
             onClick={() => setJobOpen(false)}

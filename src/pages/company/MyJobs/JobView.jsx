@@ -3,26 +3,16 @@ import { FaStar } from "react-icons/fa6";
 import { GoClock } from "react-icons/go";
 
 import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
-import { useState } from "react";
+import {useEffect, useState } from "react";
 
-export default function ApplySidebar({ data }) {
-  let [isOpen, setIsOpen] = useState(false);
-
-  function open() {
-    setIsOpen(true);
-  }
-
-  function close() {
-    setIsOpen(false);
-  }
-
+export default function JobView({ data, jobView, setJobView }) {
   return (
     <>
-      <button onClick={() => setIsOpen(true)} className="btn apply-now-btn">
+      {/* <button onClick={() => setJobView(true)} className="btn apply-now-btn">
         Apply Now
-      </button>
+      </button> */}
       <Dialog
-        open={isOpen}
+        open={jobView}
         as="div"
         className="relative z-10 focus:outline-none"
         onClose={close}
@@ -40,7 +30,7 @@ export default function ApplySidebar({ data }) {
                   </div>
                   <div>
                     <p className="4xl:text-lg text-base font-semibold text-black! dark:text-darktext1!">
-                      {data.name} 
+                      {data.jobTitle}
                     </p>
                     <p className="lg:text-base font-normal text-slate-500! relative bottom-[1px] py-0.5">
                       {data.location}
@@ -56,37 +46,57 @@ export default function ApplySidebar({ data }) {
                   </div>
                 </div>
 
-                <div className="mt-4 bg-darkbg1 w-full text-center py-2 btn apply-now-btn ">
-                  <Button className="" onClick={close}>
-                    Apply Now
-                  </Button>
-                </div>
+                <div className="h-[1px] bg-primary/20 mt-5" ></div>
 
-                {/* <DialogTitle
-                  as="h3"
-                  className="text-2xl font-Rubik! font-medium text-white"
-                >
-                  {data.title}
-                </DialogTitle> */}
 
                 <div className="mt-5">
                   <h3 className="font-Rubik! 4xl:text-[22px] text-lg font-semibold text-gray-600 dark:text-darktext1">
                     {data.title}
                   </h3>
-                  <div className="flex items-center gap-2 mb-4 mt-2">
+                  <div className="flex items-center flex-wrap gap-2 mb-4 mt-2">
+                  
                     <div className="border border-sky-300 dark:border-slate-700 dark:bg-darkbg1 rounded-md w-fit text-xs text-sky-600  bg-sky-100 px-2 py-0.5">
-                      <span>Type :</span> {data.type}
+                      <span>Category :</span> {data.jobCategory}
+                    </div>
+                    <div className="flex items-center gap-2 border border-gray-300 dark:border-slate-700 dark:bg-darkbg1 rounded-md w-fit text-xs text-slate-500  bg-gray-100 px-2 py-0.5">
+                      <span>Job Type:</span> {data.jobType}
+                    </div>
+                    <div className="flex items-center gap-2 border border-gray-300 dark:border-slate-700 dark:bg-darkbg1 rounded-md w-fit text-xs text-slate-500  bg-gray-100 px-2 py-0.5">
+                      <span>Workplace Type:</span> {data.workplaceType}
                     </div>
                     <div className="flex items-center gap-2 border border-gray-300 dark:border-slate-700 dark:bg-darkbg1 rounded-md w-fit text-xs text-slate-500  bg-gray-100 px-2 py-0.5">
                       <span>
-                        <GoClock />
+                        Posted
                       </span>
-                      {data.posted_time}
+                      {data.postedDate}
                     </div>
+                    <div className="flex items-center gap-2 border border-gray-300 dark:border-slate-700 dark:bg-darkbg1 rounded-md w-fit text-xs text-slate-500  bg-gray-100 px-2 py-0.5">
+                      <span>
+                        Applicants
+                      </span>
+                      {data.applicants}
+                    </div>
+                    <div className={`flex items-center gap-2 border border-${data.status == 'Active' ? 'yellow' : 'red'}-300 dark:border-${data.status == 'Active' ? 'green' : 'red'}-500 dark:bg-darkbg1 rounded-md w-fit text-xs text-${data.status == 'Active' ? 'green' : 'red'}-500  bg-gray-100 px-2 py-0.5`}>
+                      <span>Status:</span> {data.status} 
+                    </div>
+                    <div className="flex items-center gap-2 border border-gray-300 dark:border-slate-700 dark:bg-darkbg1 rounded-md w-fit text-xs text-slate-500  bg-gray-100 px-2 py-0.5">
+                      <span>Location:</span> {data.location}
+                    </div>
+                    <div className="border border-sky-300 dark:border-slate-700 dark:bg-darkbg1 rounded-md w-fit text-xs text-sky-600  bg-sky-100 px-2 py-0.5">
+                        <span>Salary :</span> {data.salaryMin}K - {data.salaryMax}K
+                        </div>
                   </div>
                   <p className="lg:text-[15px] font-normal text-slate-600! dark:text-darktext1! leading-5.5 mt-1.5">
                     {data.desc}
                   </p>
+                  <div className="flex items-center gap-2 mt-3">
+                    {
+                        data.requirement.map((item,index)=>(
+                            <div className="bg-crmDarkbg1 text-white px-3 py-[4px] rounded-md text-[13px]" >{item}</div>
+                        ))
+                    }
+                    <div></div>
+                  </div>
                 </div>
               </DialogPanel>
             </div>

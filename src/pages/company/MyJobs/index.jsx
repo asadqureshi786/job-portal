@@ -1,17 +1,21 @@
 import React from "react";
-import { useState } from 'react'
+import { useState } from "react";
 
 import DataTable from "react-data-table-component";
 import TableHead from "../../../components/crm/TableHead";
 import AddJob from "./AddJob";
+import JobView from "./JobView";
 
 // icons
 import { FaEye } from "react-icons/fa";
 import { HiOutlinePlusSmall } from "react-icons/hi2";
+import { VscEdit } from "react-icons/vsc";
+import { IoTrashOutline } from "react-icons/io5";
 
 export default function index() {
+  let [jobOpen, setJobOpen] = useState(false);
 
-  let [jobOpen, setJobOpen] = useState(false)
+  let [jobView, setJobView] = useState(false);
 
   const rcStatusStyles = {
     Closed: "bg-red-800/20 text-red-500",
@@ -20,23 +24,43 @@ export default function index() {
   // Recent Jobs Table Data
   const jobCol = [
     { name: "ID", selector: (row) => row.id, sortable: true, width: "70px" },
-    { name: "Job Title", selector: (row) => (
-      <>
-        {row.jobTitle}
-        <p className="text-[12px] mt-1 dark:text-slate-400!" > {row.salaryMin}K  - {row.salaryMax}K </p>
-       
-      </>
-    ), sortable: true , width: "250px" },
-    { name: "Job Category", selector: (row) => 
-    (
-      <>
-        {row.jobCategory} 
-        <p className="text-[12px] mt-1 dark:text-slate-400!" > {row.workplaceType}  - {row.jobType} </p>
-      </>
-    ),
-      minWidth: "200px" },
-    { name: "Applicants", selector: (row) => row.applicants, minWidth: "150px" },
-    { name: "Posted Date", selector: (row) => row.postedDate , minWidth: "150px"},
+    {
+      name: "Job Title",
+      selector: (row) => (
+        <>
+          {row.jobTitle}
+          <p className="text-[12px] mt-1 dark:text-slate-400!">
+            {" "}
+            {row.salaryMin}K - {row.salaryMax}K{" "}
+          </p>
+        </>
+      ),
+      sortable: true,
+      width: "250px",
+    },
+    {
+      name: "Job Category",
+      selector: (row) => (
+        <>
+          {row.jobCategory}
+          <p className="text-[12px] mt-1 dark:text-slate-400!">
+            {" "}
+            {row.workplaceType} - {row.jobType}{" "}
+          </p>
+        </>
+      ),
+      minWidth: "200px",
+    },
+    {
+      name: "Applicants",
+      selector: (row) => row.applicants,
+      minWidth: "150px",
+    },
+    {
+      name: "Posted Date",
+      selector: (row) => row.postedDate,
+      minWidth: "150px",
+    },
     {
       name: "Status",
       selector: (row) => (
@@ -56,8 +80,14 @@ export default function index() {
       selector: (row) => (
         <>
           <div>
-            <button className="action-box">
+            <button onClick={()=> setJobView(true) } className="action-box">
               <FaEye />
+            </button>
+            <button className="action-box edit">
+              <VscEdit />
+            </button>
+            <button className="action-box delete">
+              <IoTrashOutline />
             </button>
           </div>
         </>
@@ -65,140 +95,45 @@ export default function index() {
       width: "150px",
     },
   ];
-const jobData = [
-  {
-    id: 1,
-    jobTitle: "Senior Software Engineer",
-    jobCategory: "Engineering",
-    status: "Active",
-    applicants: 10,
-    postedDate: "2023-01-01",
-    jobType: "Full Time",
-    workplaceType: "Remote",
-    salaryMin: 180,
-    salaryMax: 300,
-  },
-  {
-    id: 2,
-    jobTitle: "Product Manager",
-    jobCategory: "Product Management",
-    status: "Closed",
-    applicants: 5,
-    postedDate: "2023-01-02",
-    jobType: "Internship",
-    workplaceType: "Onsite",
-    salaryMin: 80,
-    salaryMax: 120,
-  },
-  {
-    id: 3,
-    jobTitle: "UI/UX Designer",
-    jobCategory: "Design",
-    status: "Closed",
-    applicants: 0,
-    postedDate: "2023-01-03",
-    jobType: "Part Time",
-    workplaceType: "Hybrid",
-    salaryMin: 60,
-    salaryMax: 100,
-  },
-  {
-    id: 4,
-    jobTitle: "Frontend Developer",
-    jobCategory: "Software Development",
-    status: "Closed",
-    applicants: 156,
-    postedDate: "2023-01-04",
-    jobType: "Full Time",
-    workplaceType: "Onsite",
-    salaryMin: 120,
-    salaryMax: 200,
-  },
-  {
-    id: 5,
-    jobTitle: "Digital Marketing Manager",
-    jobCategory: "Marketing",
-    status: "Active",
-    applicants: 8,
-    postedDate: "2023-01-05",
-    jobType: "Full Time",
-    workplaceType: "Remote",
-    salaryMin: 100,
-    salaryMax: 180,
-  },
-  {
-    id: 6,
-    jobTitle: "Backend Developer",
-    jobCategory: "Software Development",
-    status: "Active",
-    applicants: 0,
-    postedDate: "2023-01-06",
-    jobType: "Full Time",
-    workplaceType: "Remote",
-    salaryMin: 130,
-    salaryMax: 220,
-  },
-  {
-    id: 7,
-    jobTitle: "HR Executive",
-    jobCategory: "Human Resources",
-    status: "Active",
-    applicants: 0,
-    postedDate: "2023-01-07",
-    jobType: "Full Time",
-    workplaceType: "Remote",
-    salaryMin: 70,
-    salaryMax: 110,
-  },
-  {
-    id: 8,
-    jobTitle: "Full Stack Developer",
-    jobCategory: "Software Development",
-    status: "Active",
-    applicants: 0,
-    postedDate: "2023-01-08",
-    jobType: "Full Time",
-    workplaceType: "Remote",
-    salaryMin: 150,
-    salaryMax: 250,
-  },
-  {
-    id: 9,
-    jobTitle: "Project Manager",
-    jobCategory: "Project Management",
-    status: "Active",
-    applicants: 0,
-    postedDate: "2023-01-09",
-    jobType: "Full Time",
-    workplaceType: "Remote",
-    salaryMin: 120,
-    salaryMax: 200,
-  },
-  {
-    id: 10,
-    jobTitle: "Software Engineer",
-    jobCategory: "Engineering",
-    status: "Active",
-    applicants: 0,
-    postedDate: "2023-01-10",
-    jobType: "Full Time",
-    workplaceType: "Remote",
-    salaryMin: 100,
-    salaryMax: 180,
-  },
-  {
-    id: 11,
-    jobTitle: "Junior Software Engineer",
-    jobCategory: "Engineering",
-    status: "Active",
-    applicants: 0,
-    postedDate: "2023-01-10",
-    jobType: "Full Time",
-    workplaceType: "Remote",
-    salaryMin: 70,
-    salaryMax: 120,
-  },
-];
+  const jobData = [
+    {
+      id: 1,
+      logo: "/img/c_logo/google.png",
+      location: "New York, USA",
+      jobTitle: "Senior Software Engineer",
+      jobCategory: "Engineering",
+      status: "Active",
+      applicants: 10,
+      postedDate: "2023-01-01",
+      jobType: "Full Time",
+      workplaceType: "Remote",
+      salaryMin: 180,
+      salaryMax: 300,
+      rating: "2.5",
+      desc: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      requirement : ['HTML','React.js','Vue.js'],
+      
+    },
+    {
+      id: 2,
+      logo: "/img/c_logo/google.png",
+      location: "New York, USA",
+      jobTitle: "Product Manager",
+      jobCategory: "Product Management",
+      status: "Closed",
+      applicants: 5,
+      postedDate: "2023-01-02",
+      jobType: "Internship",
+      workplaceType: "Onsite",
+      salaryMin: 80,
+      salaryMax: 120,
+      rating: "2.5",
+      desc: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      requirement : ['HTML','React.js','Vue.js'],
+
+    },
+   
+  ];
 
   return (
     <>
@@ -206,9 +141,9 @@ const jobData = [
         title="My Jobs"
         subText="Manage and track your posted job listings."
       >
-        <button className="header-btn primary"  onClick={() => setJobOpen(true)} >
+        <button className="header-btn primary" onClick={() => setJobOpen(true)}>
           {" "}
-          <span className="text-lg" >
+          <span className="text-lg">
             <HiOutlinePlusSmall />
           </span>{" "}
           Add Jobs
@@ -224,6 +159,7 @@ const jobData = [
         />
       </div>
       <AddJob jobOpen={jobOpen} setJobOpen={setJobOpen} />
+      <JobView data={jobData[0]} jobView={jobView} setJobView={setJobView} />
     </>
   );
 }
