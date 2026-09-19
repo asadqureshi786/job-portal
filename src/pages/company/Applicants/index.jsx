@@ -1,11 +1,16 @@
-import React from "react";
+import { useState } from "react";
 import DataTable from "react-data-table-component";
 import TableHead from "../../../components/crm/TableHead";
-
+import AddApplicant from "./AddApplicant";
 // icons
 import { FaEye } from "react-icons/fa";
+import { IoTrashOutline } from "react-icons/io5";
+import { BsDownload } from "react-icons/bs";
+import { HiOutlinePlusSmall } from "react-icons/hi2";
 
 export default function index() {
+  let [appOpen, setAppOpen] = useState(false);
+
   const statusStyles = {
     "Under Review": "bg-blue-900/20 text-blue-400",
     Shortlisted: "bg-green-900/20 text-green-400",
@@ -30,6 +35,22 @@ export default function index() {
     { name: "Job Position", selector: (row) => row.role },
     { name: "Applied Date", selector: (row) => row.appliedDate },
     {
+      name: "Resume",
+      selector: (row) => (
+        <>
+          <a
+            className="text-white font-semibold underline flex items-center gap-2"
+            href="download"
+          >
+            {row.resume}
+            <span className="text-base!">
+              <BsDownload />
+            </span>
+          </a>
+        </>
+      ),
+    },
+    {
       name: "Status",
       selector: (row) => (
         <>
@@ -48,8 +69,14 @@ export default function index() {
       selector: (row) => (
         <>
           <div>
-            <button className="action-box">
+            <button onClick={() => setJobView(true)} className="action-box">
               <FaEye />
+            </button>
+            <button
+              onClick={() => setRemove(true)}
+              className="action-box delete"
+            >
+              <IoTrashOutline />
             </button>
           </div>
         </>
@@ -65,76 +92,20 @@ export default function index() {
       role: "Engineering Lead",
       status: "Under Review",
       appliedDate: "2023-01-01",
-    },
-    {
-      id: 2,
-      candidate: "Marcus Webb",
-      role: "Product Manager",
-      status: "Shortlisted",
-      appliedDate: "2023-01-02",
-    },
-    {
-      id: 3,
-      candidate: "Sophia Williams",
-      role: "UI/UX Designer",
-      status: "Rejected",
-      appliedDate: "2023-01-03",
-    },
-    {
-      id: 4,
-      candidate: "Daniel Kim",
-      role: "Frontend Developer",
-      status: "Offers Sent",
-      appliedDate: "2023-01-04",
-    },
-    {
-      id: 5,
-      candidate: "Olivia Martinez",
-      role: "Marketing Manager",
-      status: "Under Review",
-      appliedDate: "2023-01-05",
-    },
-    {
-      id: 6,
-      candidate: "Ethan Brown",
-      role: "Backend Developer",
-      status: "Shortlisted",
-      appliedDate: "2023-01-06",
-    },
-    {
-      id: 7,
-      candidate: "Mia Anderson",
-      role: "HR Specialist",
-      status: "Under Review",
-      appliedDate: "2023-01-07",
-    },
-    {
-      id: 8,
-      candidate: "Noah Wilson",
-      role: "Full Stack Developer",
-      status: "Rejected",
-      appliedDate: "2023-01-08",
-    },
-    {
-      id: 9,
-      candidate: "Emma Davis",
-      role: "Project Manager",
-      status: "Offers Sent",
-      appliedDate: "2023-01-09",
-    },
-    {
-      id: 10,
-      candidate: "Liam Thompson",
-      role: "Software Engineer",
-      status: "Shortlisted",
-      appliedDate: "2023-01-10",
+      resume: "Asad CV",
     },
   ];
 
   return (
     <>
-      <TableHead title="Applicants" subText="Manage and track Applicatns." >
-        {/* <button className="btn btn-primary">Add Jobs</button> */}
+      <TableHead title="Applicants" subText="Manage and track Applicatns.">
+        <button className="header-btn primary" onClick={() => setAppOpen(true)}>
+          {" "}
+          <span className="text-lg">
+            <HiOutlinePlusSmall />
+          </span>{" "}
+          Add Applicant
+        </button>
       </TableHead>
       <div className="tm-data-table">
         <DataTable
@@ -145,6 +116,7 @@ export default function index() {
           fixedHeaderScrollHeight="400px"
         />
       </div>
+      <AddApplicant open={appOpen} setOpen={setAppOpen} />
     </>
   );
 }

@@ -23,12 +23,12 @@ export default function AddJob({ jobOpen, setJobOpen }) {
     <Dialog
       open={jobOpen}
       onClose={() => setJobOpen(false)}
-      className="relative z-100 bg-red-500 "
+      className="all_modal"
     >
-      <div className="fixed inset-0 flex w-screen items-center justify-center p-10 backdrop-blur-lg">
+      <div className="parent">
         <DialogPanel
           transition
-          className="relative  transition-all 4xl:w-7xl w-[80%] 4xl:h-fit h-fit space-y-4 border-2 border-primary/20 rounded-xl bg-crmDarkbg2 px-9 py-6 data-closed:scale-0"
+          className="dialogPanel lg"
         >
           {/* <div
             onClick={() => setJobOpen(false)}
@@ -127,7 +127,7 @@ export default function AddJob({ jobOpen, setJobOpen }) {
               </div>
             </form>
             
-          <div className="flex modal-bottom gap-4">
+          <div className="modal-bottom">
             <button onClick={() => setJobOpen(false)} className="btn btn-secondary" >Close</button>
             <button onClick={() => setJobOpen(false)} className="btn btn-primary" >Add</button>
           </div>

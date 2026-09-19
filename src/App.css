@@ -395,14 +395,19 @@ form .groups input{
     }
 
 }
+::-webkit-calendar-picker-indicator {
+    @apply  dark:invert-[1]!;
+    /* display:none; */
+}
+
 
 .action-box{
-  @apply dark:bg-crmDarkbg2 cursor-pointer bg-primary/30 p-1.5 rounded-lg text-[15px] text-primary  dark:hover:text-blue-700 mr-2 transition-all;
+  @apply dark:bg-primary/10 cursor-pointer bg-primary/50 p-1.5 rounded-lg text-[15px] text-primary   mr-2 transition-all;
   &.edit{
-    @apply bg-green-500/10! text-green-400;
+    @apply dark:bg-green-500/10! bg-green-500/30! dark:text-green-400 text-green-600;
   }
   &.delete{
-    @apply bg-red-500/10! text-red-400;
+    @apply dark:bg-red-500/10! bg-red-500/20! text-red-400;
   }
 }
 
@@ -435,10 +440,10 @@ form .groups input{
   }
   form{
     label{
-      @apply font-Inter! font-semibold! text-white text-[13px]!;
+      @apply font-Inter! font-normal! text-white text-[13px]!;
     }
     input,select{
-      @apply h-[41px] border-1! text-sm font-thin!;
+      @apply h-[41px] border-1! border-[#1f2938] text-sm font-thin!;
     }
   }
   .modal-bottom{
@@ -466,3 +471,22 @@ form .groups input{
   /* @apply border bg-slate-50 dark:bg-transparent border-slate-200 dark:border-slate-700 focus:border-primary text-gray-600 dark:text-darktext1 font-normal rounded-lg py-2 px-4 focus:outline-0 focus:bg-transparent */
 
 /* CRM Form Design */
+
+
+/* All Modal Design CSS Start */
+.all_modal{
+  @apply relative z-100;
+  .parent{
+    @apply fixed inset-0 flex w-screen items-center justify-center p-10 backdrop-blur-lg;
+    .dialogPanel{
+      @apply relative  transition-all 4xl:h-fit h-fit space-y-4 border-2 border-primary/20 rounded-xl bg-[#080c0f] px-9 py-6 data-closed:scale-0;
+      &.lg{
+        @apply 4xl:w-7xl w-[80%];
+      }
+    }
+  }
+  .modal-bottom{
+    @apply flex gap-4;
+  }
+}
+/* All Modal Design CSS End */

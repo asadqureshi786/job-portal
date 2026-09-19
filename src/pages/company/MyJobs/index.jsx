@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import DataTable from "react-data-table-component";
 import TableHead from "../../../components/crm/TableHead";
+import DeleteModal from "../../../components/crm/DeleteModal";
 import AddJob from "./AddJob";
 import JobView from "./JobView";
 
@@ -11,11 +12,13 @@ import { FaEye } from "react-icons/fa";
 import { HiOutlinePlusSmall } from "react-icons/hi2";
 import { VscEdit } from "react-icons/vsc";
 import { IoTrashOutline } from "react-icons/io5";
+import { redirect } from "react-router-dom";
 
 export default function index() {
   let [jobOpen, setJobOpen] = useState(false);
-
   let [jobView, setJobView] = useState(false);
+  let [remove, setRemove] = useState(false);
+
 
   const rcStatusStyles = {
     Closed: "bg-red-800/20 text-red-500",
@@ -23,7 +26,7 @@ export default function index() {
   };
   // Recent Jobs Table Data
   const jobCol = [
-    { name: "ID", selector: (row) => row.id, sortable: true, width: "70px" },
+    { name: "ID", selector: (row) => row.id, sortable: true, width: "70px"},
     {
       name: "Job Title",
       selector: (row) => (
@@ -86,7 +89,7 @@ export default function index() {
             <button className="action-box edit">
               <VscEdit />
             </button>
-            <button className="action-box delete">
+            <button onClick={()=> setRemove(true)} className="action-box delete">
               <IoTrashOutline />
             </button>
           </div>
@@ -160,6 +163,7 @@ export default function index() {
       </div>
       <AddJob jobOpen={jobOpen} setJobOpen={setJobOpen} />
       <JobView data={jobData[0]} jobView={jobView} setJobView={setJobView} />
+      <DeleteModal remove={remove} setRemove={setRemove} />
     </>
   );
 }

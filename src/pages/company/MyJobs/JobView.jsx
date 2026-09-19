@@ -15,7 +15,8 @@ export default function JobView({ data, jobView, setJobView }) {
         open={jobView}
         as="div"
         className="relative z-10 focus:outline-none"
-        onClose={close}
+         onClose={() => setJobView(false)}
+
       >
         <div className="fixed inset-0 bg-black/50 backdrop-blur-[5px] transition-opacity">
           <div className="fixed inset-0 z-10  w-screen overflow-y-auto">
@@ -26,7 +27,7 @@ export default function JobView({ data, jobView, setJobView }) {
               >
                 <div className="flex items-center gap-5 sticky">
                   <div className="bg-gray-100 dark:bg-black dark:group-hover:bg-darkbg1 rounded-xl p-4 flex justify-center items-center">
-                    <img src={data.logo} className="company-logo w-10" /> x
+                    <img src={data.logo} className="company-logo w-10" />
                   </div>
                   <div>
                     <p className="4xl:text-lg text-base font-semibold text-black! dark:text-darktext1!">
