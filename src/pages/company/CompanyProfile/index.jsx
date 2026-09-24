@@ -118,9 +118,10 @@ export default function index() {
           <div className="flex px-3 py-3 items-end gap-10">
             <a
               href="#"
-              className="text-slate-400 text-sm
+              className="text-slate-400 text-sm flex items-center gap-2
             "
-            >
+            >   
+             <div className="dark:bg-primary/50 size-[6px] rounded-full"></div>
               www.facebook.com/compnayName
             </a>
             <a
