@@ -5,6 +5,7 @@ import {
   DialogPanel,
   DialogTitle,
 } from "@headlessui/react";
+import { useDropzone } from "react-dropzone";
 import { useState } from "react";
 import Select from 'react-select'
 
@@ -18,6 +19,16 @@ export default function AddApplicant({ open, setOpen }) {
   { value: 'strawberry', label: 'Strawberry' },
   { value: 'vanilla', label: 'Vanilla' }
 ]
+
+  const { getRootProps, getInputProps, acceptedFiles } = useDropzone({
+    accept: {
+      "application/pdf": [".pdf"],
+      "application/msword": [".doc"],
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document": [".docx"],
+    },
+    maxFiles: 1,
+    maxSize: 5 * 1024 * 1024,
+  });
 
   return (
     <Dialog
@@ -58,7 +69,7 @@ export default function AddApplicant({ open, setOpen }) {
                   </div>
                 </div>
                 <div className="lg:col-span-5 col-span-12">
-                  <div className="group">
+                  <div className="group react-select">
                     <label>Job Positions</label>
                     {/* <input className="field" /> */}
                     <Select options={jobCategory} className="custom-select" />
@@ -70,8 +81,8 @@ export default function AddApplicant({ open, setOpen }) {
                     <input type="date" className="field" />
                   </div>
                 </div>
-                       <div className="lg:col-span-4 col-span-12">
-                  <div className="group">
+                <div className="lg:col-span-4 col-span-12">
+                  <div className="react-select group">
                     <label>Status</label>
                     {/* <input className="field" /> */}
                     <Select options={jobCategory} className="custom-select" />
@@ -81,6 +92,24 @@ export default function AddApplicant({ open, setOpen }) {
                   <div className="group">
                     <label>Mobile Number</label>
                     <input className="field" />
+                  </div>
+                </div>
+                <div className="lg:col-span-12 col-span-12">
+                  <div className="group">
+                    <label>Mobile Number</label>
+                    <div
+                      {...getRootProps()}
+                      className="border-2 border-dashed upload-drop-zone p-6 text-center cursor-pointer">
+                      <input {...getInputProps()} />
+
+                      <p>Drag & drop resume here, or click to select</p>
+
+                      {acceptedFiles.map((file) => (
+                        <p key={file.name} className="mt-2">
+                          {file.name}
+                        </p>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>

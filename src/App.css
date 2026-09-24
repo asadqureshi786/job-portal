@@ -466,6 +466,23 @@ form .groups input{
       @apply py-0!;
     }
   }
+  .react-select{
+    input{
+      @apply h-fit! text-transparent!;
+    }
+    .css-1dimb5e-singleValue{
+      @apply text-white! font-thin! text-sm!;
+    }
+    .css-hlgwow{
+      @apply px-0!;
+    }
+    .css-1nmdiq5-menu  {
+      @apply bg-crmDarkbg2;
+    }
+  }
+  .upload-drop-zone{
+    @apply dark:text-white border-[#1f2938] text-sm rounded-lg;
+  }
 }
 
   /* @apply border bg-slate-50 dark:bg-transparent border-slate-200 dark:border-slate-700 focus:border-primary text-gray-600 dark:text-darktext1 font-normal rounded-lg py-2 px-4 focus:outline-0 focus:bg-transparent */
@@ -487,6 +504,29 @@ form .groups input{
   }
   .modal-bottom{
     @apply flex gap-4;
+    button{
+      @apply py-1!;
+    }
   }
 }
 /* All Modal Design CSS End */
+
+
+/* CRM Compnay Profile Section CSS Start */
+.compnay_profile_detail{
+  .heading{
+    @apply text-base dark:text-slate-200 border dark:border-crmDarkbg1 dark:bg-primary/10 px-3 py-2 font-semibold rounded-lg font-Nunito;
+  }
+  ul{
+    li{
+      @apply px-3 flex flex-col  justify-between  dark:text-white text-[14px] py-4 border-b border-slate-900;
+      span:nth-child(1){
+        @apply text-xs mb-1 inline-block text-slate-300;
+      }
+      span:nth-child(2){
+        @apply text-sm;
+      }
+    }
+  }
+}
+/* CRM Compnay Profile Section CSS End */

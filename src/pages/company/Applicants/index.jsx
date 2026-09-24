@@ -6,6 +6,9 @@ import AddApplicant from "./AddApplicant";
 import { FaEye } from "react-icons/fa";
 import { IoTrashOutline } from "react-icons/io5";
 import { BsDownload } from "react-icons/bs";
+
+import { BiSolidDownload } from "react-icons/bi";
+
 import { HiOutlinePlusSmall } from "react-icons/hi2";
 
 export default function index() {
@@ -29,7 +32,7 @@ export default function index() {
             {row.candidate}
           </div>
         </>
-      ),
+      ),  
       sortable: true,
     },
     { name: "Job Position", selector: (row) => row.role },
@@ -39,12 +42,12 @@ export default function index() {
       selector: (row) => (
         <>
           <a
-            className="text-white font-semibold underline flex items-center gap-2"
+            className="text-primary font-semibold flex items-center gap-1"
             href="download"
           >
             {row.resume}
             <span className="text-base!">
-              <BsDownload />
+              <BiSolidDownload />
             </span>
           </a>
         </>

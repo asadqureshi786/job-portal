@@ -19,6 +19,7 @@ import Login from "../pages/auth/Login";
 import C_Dashboard from "../pages/company/Dashboard";
 import C_MyJobs from "../pages/company/MyJobs/index";
 import C_Applicants from "../pages/company/Applicants/index";
+import C_CompanyProfile from "../pages/company/CompanyProfile/index";
 
 // Company Routes
 const routesLinks = [
@@ -28,7 +29,8 @@ const routesLinks = [
     children: [
       { path: "/dashboard", element: <C_Dashboard /> },
       { path: "/jobs", element: <C_MyJobs /> },
-      { path: "/applicants", element: <C_Applicants /> }
+      { path: "/applicants", element: <C_Applicants /> },
+      { path: "/company-profile", element: <C_CompanyProfile /> }
     ],
   },
 ];

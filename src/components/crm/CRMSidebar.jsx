@@ -15,6 +15,8 @@ import { BiSolidFileFind } from "react-icons/bi";
 import { IoPeople } from "react-icons/io5";
 import { PiCubeFill } from "react-icons/pi";
 import { IoMdSettings } from "react-icons/io";
+import { MdSupportAgent } from "react-icons/md";
+
 
 import { SlArrowLeft } from "react-icons/sl";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
@@ -43,7 +45,7 @@ export default function CRMSidebar({ isSidebarOpen, setIsSidebarOpen }) {
     },
     {
       title: "Support",
-      icon: <IoMdSettings />,
+      icon: <MdSupportAgent />,
       url: "/support",
     },
 
